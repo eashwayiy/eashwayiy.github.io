@@ -3,36 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="مدونة eashwayiy - أفضل مدونة تقنية للبرمجة والويب والتطبيقات والتكنولوجيا والذكاء الاصطناعي والدروس والشروحات">
-    <meta name="keywords" content="برمجة, ويب, تطبيقات, تكنولوجيا, درس برمجة, شرح كود, دروس تقنية, ذكاء اصطناعي, تطوير الويب, تطوير التطبيقات, HTML, CSS, JavaScript, Python, Java, PHP, البرمجيات, أدوات التطوير">
+    <meta name="description" content="مدونة eashwayiy - أشياء عشوائية، غريبة، ومفيدة من كل مكان. اكتشف محتوى متنوعًا كل يوم.">
+    <meta name="keywords" content="عشوائي, حقائق, غرائب, نصائح, ترفيه, ثقافة, معلومات عامة, eashwayiy">
     <meta name="author" content="eashwayiy">
-    <meta property="og:title" content="مدونة eashwayiy - مدونة تقنية شاملة">
-    <meta property="og:description" content="منصة متكاملة للدروس والشروحات التقنية والبرمجة">
-    <title>مدونة eashwayiy - دروس برمجة وتقنية متقدمة</title>
+    <meta property="og:title" content="مدونة eashwayiy - عالم العشوائية">
+    <meta property="og:description" content="مدونة تقدم لك جرعة يومية من المحتوى العشوائي الممتع والمفيد بعيدًا عن التخصص">
+    <title>eashwayiy • مدونة عشوائية لكل شيء</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         /* ========= إعدادات المتغيرات والألوان - ثيم الأخضر والأبيض ========= */
         :root {
             --primary-green: #27ae60;
-            /* أخضر أساسي مريح */
             --light-green: #2ecc71;
-            /* أخضر فاتح للتفاعل */
             --dark-green: #1e8449;
-            /* أخضر غامق جداً للنصوص المهمة */
             --soft-white: #f4f9f4;
-            /* أبيض مائل للخضرة الخفيفة جداً للخلفية */
             --pure-white: #ffffff;
             --text-dark: #2d3436;
-            /* رمادي غامق جداً للنصوص */
             --text-light: #636e72;
-            /* رمادي فاتح للنصوص الثانوية */
             --accent-bg: #e8f5e9;
-            /* خلفية خضراء باهتة للأقسام */
             --shadow: 0 4px 20px rgba(39, 174, 96, 0.1);
-            /* ظل بلون أخضر خفيف */
-            --gradient-hero: linear-gradient(135deg, #1a6b38 0%, #27ae60 40%, #2ecc71 100%);
-            --border-radius-card: 20px;
-            --transition-smooth: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+            --gradient-hero: linear-gradient(145deg, #1a6b38 0%, #27ae60 45%, #6fcf97 100%);
+            --border-radius-card: 24px;
+            --transition-smooth: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1);
         }
 
         * {
@@ -51,8 +43,6 @@
             color: var(--text-dark);
             line-height: 1.8;
             font-size: 16px;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
         .container {
@@ -61,11 +51,11 @@
             padding: 0 25px;
         }
 
-        /* ========= شريط التنقل - Navbar ========= */
+        /* ========= شريط التنقل ========= */
         .navbar {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background-color: rgba(255, 255, 255, 0.93);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
             padding: 1rem 0;
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
             position: sticky;
@@ -84,31 +74,31 @@
 
         .nav-brand h1 {
             color: var(--primary-green);
-            font-size: 2rem;
+            font-size: 2.1rem;
             letter-spacing: -1px;
             font-weight: 800;
             display: flex;
             align-items: center;
             gap: 10px;
             transition: var(--transition-smooth);
+            cursor: pointer;
         }
         .nav-brand h1:hover {
             color: var(--dark-green);
-            transform: scale(1.03);
+            transform: scale(1.04);
         }
         .nav-brand h1 span {
             background: var(--primary-green);
             color: #fff;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             padding: 0.2rem 0.7rem;
             border-radius: 30px;
-            letter-spacing: 0;
         }
 
         .nav-links {
             list-style: none;
             display: flex;
-            gap: 10px;
+            gap: 8px;
         }
 
         .nav-links li a {
@@ -117,25 +107,25 @@
             margin-right: 15px;
             font-weight: 700;
             font-size: 1.05rem;
-            padding: 8px 16px;
+            padding: 8px 18px;
             border-radius: 30px;
             transition: var(--transition-smooth);
-            position: relative;
         }
 
         .nav-links li a:hover {
             color: var(--pure-white);
             background: var(--primary-green);
-            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+            box-shadow: 0 5px 18px rgba(39, 174, 96, 0.35);
+            transform: translateY(-2px);
         }
 
-        /* ========= قسم الهيرو - Hero Section ========= */
+        /* ========= قسم الهيرو ========= */
         .hero {
             background: var(--gradient-hero);
             color: var(--pure-white);
             padding: 100px 0 130px;
             text-align: center;
-            clip-path: ellipse(160% 100% at 50% 0%);
+            clip-path: ellipse(170% 100% at 50% 0%);
             position: relative;
             overflow: hidden;
         }
@@ -143,11 +133,11 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: -60px;
-            left: -60px;
-            width: 280px;
-            height: 280px;
-            background: rgba(255, 255, 255, 0.04);
+            top: -70px;
+            left: -70px;
+            width: 320px;
+            height: 320px;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 50%;
             pointer-events: none;
         }
@@ -155,18 +145,18 @@
         .hero::after {
             content: '';
             position: absolute;
-            bottom: -40px;
-            right: -40px;
-            width: 240px;
-            height: 240px;
-            background: rgba(255, 255, 255, 0.05);
+            bottom: -50px;
+            right: -50px;
+            width: 280px;
+            height: 280px;
+            background: rgba(255, 255, 255, 0.06);
             border-radius: 50%;
             pointer-events: none;
         }
 
         .hero h1 {
             font-size: 3.6rem;
-            margin-bottom: 1.3rem;
+            margin-bottom: 1.2rem;
             text-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
             font-weight: 800;
             letter-spacing: -1px;
@@ -175,13 +165,13 @@
         }
 
         .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2.2rem;
+            font-size: 1.3rem;
+            margin-bottom: 2.3rem;
             opacity: 0.93;
             text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
             position: relative;
             z-index: 2;
-            max-width: 600px;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -193,7 +183,7 @@
             margin: 0 auto;
             position: relative;
             z-index: 2;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
             border-radius: 50px;
         }
 
@@ -225,10 +215,10 @@
 
         .search-btn:hover {
             background-color: #0f261d;
-            transform: scale(1.03);
+            transform: scale(1.04);
         }
 
-        /* ========= قسم نتائج البحث ========= */
+        /* ========= نتائج البحث ========= */
         .search-results {
             background: var(--pure-white);
             padding: 40px 0;
@@ -247,11 +237,11 @@
         .result-card {
             background: var(--accent-bg);
             padding: 20px;
-            border-radius: 16px;
+            border-radius: 18px;
             border-right: 5px solid var(--primary-green);
         }
 
-        /* ========= كروت المقالات - Post Cards ========= */
+        /* ========= كروت المقالات ========= */
         .posts {
             padding: 80px 0;
         }
@@ -294,12 +284,18 @@
             border: 1px solid rgba(39, 174, 96, 0.12);
             display: flex;
             flex-direction: column;
+            transform: rotate(0deg);
         }
 
         .post-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 22px 40px rgba(39, 174, 96, 0.18);
+            transform: translateY(-14px) rotate(0.5deg);
+            box-shadow: 0 24px 45px rgba(39, 174, 96, 0.2);
             border-color: var(--light-green);
+        }
+
+        /* لإضفاء لمسة عشوائية خفيفة جداً على البطاقات */
+        .post-card:nth-child(odd):hover {
+            transform: translateY(-14px) rotate(-0.4deg);
         }
 
         .post-image {
@@ -307,13 +303,14 @@
             background: var(--accent-bg);
             text-align: center;
             padding: 35px 20px;
-            border-radius: 18px;
+            border-radius: 20px;
             margin-bottom: 22px;
             transition: var(--transition-smooth);
+            background: linear-gradient(135deg, #e8f5e9, #d4efdf);
         }
         .post-card:hover .post-image {
-            background: #d4f0d8;
-            transform: scale(1.02);
+            background: #c8e6c9;
+            transform: scale(1.03);
         }
 
         .post-card h3 {
@@ -341,10 +338,10 @@
         .read-more:hover {
             color: var(--dark-green);
             border-bottom: 2px solid var(--dark-green);
-            transform: translateX(-4px);
+            transform: translateX(-6px);
         }
 
-        /* ========= قسم حول - About ========= */
+        /* ========= قسم حول ========= */
         .about {
             background-color: var(--pure-white);
             padding: 80px 0;
@@ -369,11 +366,11 @@
             list-style: none;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 12px;
+            gap: 15px;
         }
 
         .about-list li {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             padding-right: 32px;
             position: relative;
             font-size: 1.1rem;
@@ -381,15 +378,15 @@
         }
 
         .about-list li::before {
-            content: "●";
+            content: "✦";
             position: absolute;
             right: 0;
             color: var(--primary-green);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             line-height: 1.4;
         }
 
-        /* ========= قسم التواصل - Contact ========= */
+        /* ========= قسم التواصل ========= */
         .contact {
             padding: 80px 0;
             background: var(--soft-white);
@@ -449,21 +446,16 @@
             box-shadow: 0 8px 20px rgba(30, 132, 73, 0.3);
         }
 
-        /* ========= تذييل الصفحة - Footer ========= */
+        /* ========= تذييل الصفحة ========= */
         .footer {
             background-color: var(--dark-green);
             color: var(--pure-white);
             text-align: center;
             padding: 35px 0;
             font-size: 1.05rem;
-            letter-spacing: 0.5px;
         }
 
-        .footer p {
-            opacity: 0.9;
-        }
-
-        /* ========= التجاوب مع الشاشات الصغيرة ========= */
+        /* ========= التجاوب ========= */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.2rem;
@@ -473,7 +465,6 @@
             }
             .nav-links {
                 display: none;
-                /* يمكن إضافة قائمة همبرغر برمجياً لاحقاً */
             }
             .navbar .container {
                 justify-content: center;
@@ -497,6 +488,9 @@
             .contact-form {
                 padding: 25px;
             }
+            .post-card:hover {
+                transform: translateY(-8px) rotate(0deg) !important;
+            }
         }
 
         @media (max-width: 480px) {
@@ -517,111 +511,114 @@
     </style>
 </head>
 <body>
-    <!-- ========= شريط التنقل ========= -->
+    <!-- شريط التنقل -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <h1>🚀 eashwayiy<span>.</span></h1>
+                <h1>🎲 eashwayiy<span>.</span></h1>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#posts">المقالات</a></li>
-                <li><a href="#about">حول</a></li>
-                <li><a href="#contact">تواصل</a></li>
+                <li><a href="#posts">عشوائيات</a></li>
+                <li><a href="#about">عن العشوائية</a></li>
+                <li><a href="#contact">تواصل عشوائي</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- ========= قسم الهيرو ========= -->
+    <!-- قسم الهيرو -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>مرحباً بك في مدونة eashwayiy</h1>
-            <p>منصة متكاملة لتعلم البرمجة والتطوير والتكنولوجيا بأسلوب عصري ومبسط</p>
+            <h1>🌀 عالم العشوائية يبدأ هنا</h1>
+            <p>مدونة تقدم لك كل ما هو غير متوقع – حقائق غريبة، نصائح طريفة، أفكار مبتكرة، ومحتوى لا يخضع لقانون التخصص</p>
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="ابحث عن مقالات..." class="search-box" aria-label="بحث">
-                <button onclick="performSearch()" class="search-btn" aria-label="زر البحث">🔍 بحث</button>
+                <input type="text" id="searchInput" placeholder="ابحث عن أي شيء عشوائي..." class="search-box" aria-label="بحث عشوائي">
+                <button onclick="performSearch()" class="search-btn" aria-label="زر البحث">🔍 ابحث بعشوائية</button>
             </div>
         </div>
     </section>
 
-    <!-- ========= قسم نتائج البحث ========= -->
+    <!-- نتائج البحث -->
     <section id="searchResults" class="search-results" style="display:none;">
         <div class="container">
-            <h2>نتائج البحث</h2>
+            <h2>🎯 نتائج عشوائية</h2>
             <div id="resultsContainer"></div>
         </div>
     </section>
 
-    <!-- ========= قسم المقالات ========= -->
+    <!-- قسم المقالات العشوائية -->
     <section class="posts" id="posts">
         <div class="container">
-            <h2>📝 أحدث المقالات</h2>
+            <h2>✨ جرعة عشوائية اليوم</h2>
             <div class="posts-grid" id="postsContainer">
-                <!-- بطاقة مقال افتراضية -->
                 <div class="post-card">
-                    <div class="post-image">🖥️</div>
-                    <h3>أساسيات تطوير الويب</h3>
-                    <p>دليل شامل لتعلم HTML و CSS و JavaScript من الصفر حتى الاحتراف.</p>
+                    <div class="post-image">🤯</div>
+                    <h3>أغرب 7 اكتشافات علمية بالصدفة</h3>
+                    <p>من البنسلين إلى رقائق البطاطس، أشياء غيّرت العالم دون تخطيط.</p>
+                    <a href="#" class="read-more">تصفح العشوائية ←</a>
+                </div>
+                <div class="post-card">
+                    <div class="post-image">🎨</div>
+                    <h3>كيف ترسم لوحة فنية بكوب قهوة؟</h3>
+                    <p>فكرة عشوائية لاستغلال بقايا القهوة في إبداع فني مدهش.</p>
+                    <a href="#" class="read-more">اكتشف الطريقة ←</a>
+                </div>
+                <div class="post-card">
+                    <div class="post-image">🪴</div>
+                    <h3>نباتات تتكلم؟ حقيقة أم خيال علمي</h3>
+                    <p>دراسات حديثة تكشف أن النباتات تتواصل بطرق لم تكن تتوقعها.</p>
                     <a href="#" class="read-more">اقرأ المزيد ←</a>
                 </div>
                 <div class="post-card">
-                    <div class="post-image">🤖</div>
-                    <h3>مقدمة في الذكاء الاصطناعي</h3>
-                    <p>تعرف على أساسيات الذكاء الاصطناعي وتعلم الآلة بطريقة عملية.</p>
-                    <a href="#" class="read-more">اقرأ المزيد ←</a>
-                </div>
-                <div class="post-card">
-                    <div class="post-image">📱</div>
-                    <h3>تطوير تطبيقات الموبايل</h3>
-                    <p>استكشف عالم تطوير تطبيقات الهاتف باستخدام أحدث التقنيات.</p>
-                    <a href="#" class="read-more">اقرأ المزيد ←</a>
+                    <div class="post-image">🍕</div>
+                    <h3>وصفة بيتزا في 5 دقائق ليلة الامتحان</h3>
+                    <p>أسرع عشاء عشوائي ينقذ الطلاب الجائعين بأقل المكونات.</p>
+                    <a href="#" class="read-more">جرب الوصفة ←</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========= قسم حول ========= -->
+    <!-- قسم عن العشوائية -->
     <section class="about" id="about">
         <div class="container">
-            <h2>🧠 عن المدونة</h2>
+            <h2>📦 ما الذي نقدمه؟</h2>
             <div class="about-content">
-                <p>مدونة <strong>eashwayiy</strong> متخصصة في تقديم دروس وشروحات تقنية عالية الجودة في مجالات:</p>
+                <p>مدونة <strong>eashwayiy</strong> هي مساحة حرة لكل ما هو عشوائي ومفيد في آنٍ واحد. لا قيود ولا تخصص... فقط أشياء قد تغير يومك:</p>
                 <ul class="about-list">
-                    <li>🌐 تطوير الويب (HTML, CSS, JavaScript)</li>
-                    <li>🐍 البرمجة بلغات متعددة (Python, Java, PHP)</li>
-                    <li>🤖 الذكاء الاصطناعي والتعلم الآلي</li>
-                    <li>📱 تطوير التطبيقات</li>
-                    <li>⚙️ هندسة البرمجيات وأفضل الممارسات</li>
-                    <li>🔧 أدوات التطوير والبرامج المساعدة</li>
+                    <li>🧠 حقائق غريبة وعجيبة من كل العلوم</li>
+                    <li>💡 حيل حياتية بسيطة وغير تقليدية</li>
+                    <li>🎭 قصص قصيرة وفكاهية من الواقع</li>
+                    <li>🍳 وصفات سريعة بمكونات عشوائية</li>
+                    <li>🔮 تجارب ذاتية ومراجعات لأشياء غير مألوفة</li>
+                    <li>🌀 العشوائية المطلقة: أي شيء قد ينشر البهجة</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- ========= قسم التواصل ========= -->
+    <!-- قسم التواصل -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2>📬 تواصل معنا</h2>
+            <h2>📬 راسلنا بأي فكرة عشوائية</h2>
             <form class="contact-form" onsubmit="handleContact(event)">
-                <input type="text" placeholder="الاسم الكامل" required aria-label="الاسم">
-                <input type="email" placeholder="البريد الإلكتروني" required aria-label="البريد الإلكتروني">
-                <textarea placeholder="اكتب رسالتك هنا..." required aria-label="الرسالة"></textarea>
-                <button type="submit">إرسال الرسالة ✉️</button>
+                <input type="text" placeholder="اسمك (أو اسم مستعار)" required aria-label="الاسم">
+                <input type="email" placeholder="بريدك الإلكتروني" required aria-label="البريد">
+                <textarea placeholder="اكتب فكرة عشوائية، اقتراح، أو حتى نكتة..." required aria-label="الرسالة"></textarea>
+                <button type="submit">أرسل العشوائية 🎲</button>
             </form>
         </div>
     </section>
 
-    <!-- ========= تذييل الصفحة ========= -->
+    <!-- تذييل -->
     <footer class="footer">
-        <p>© <span id="currentYear"></span> مدونة eashwayiy - جميع الحقوق محفوظة 🌿</p>
+        <p>© <span id="currentYear"></span> eashwayiy • كل شيء عشوائي، وكل عشوائي جميل 🌿</p>
     </footer>
 
-    <!-- ========= سكربتات JavaScript ========= -->
     <script>
-        // تحديث سنة حقوق النشر تلقائياً
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // وظيفة البحث البسيطة
+        // وظيفة البحث العشوائي (محاكاة محتوى متنوع)
         function performSearch() {
             const query = document.getElementById('searchInput').value.trim().toLowerCase();
             const resultsSection = document.getElementById('searchResults');
@@ -632,13 +629,14 @@
                 return;
             }
 
-            // محاكاة البحث في المقالات (يمكن ربطها بقاعدة بيانات أو ملفات حقيقية)
             const samplePosts = [
-                { title: 'أساسيات تطوير الويب', snippet: 'تعلم HTML و CSS و JavaScript' },
-                { title: 'مقدمة في الذكاء الاصطناعي', snippet: 'أساسيات AI وتعلم الآلة' },
-                { title: 'تطوير تطبيقات الموبايل', snippet: 'برمجة تطبيقات الهاتف' },
-                { title: 'أمن المعلومات', snippet: 'حماية البيانات والشبكات' },
-                { title: 'قواعد البيانات', snippet: 'SQL و NoSQL للمبتدئين' }
+                { title: 'كيف تجعل صباحك أكثر إيجابية', snippet: '7 عادات صباحية عشوائية وفعالة.' },
+                { title: 'أغرب القوانين حول العالم', snippet: 'قوانين لا تصدق أنها ما زالت سارية.' },
+                { title: 'نباتات تتوهج في الظلام', snippet: 'ظاهرة الإضاءة الحيوية في الطبيعة.' },
+                { title: 'اختصارات لوحة المفاتيح التي لم تسمع بها', snippet: 'طرق عشوائية لتوفير الوقت.' },
+                { title: 'بيتزا البطاطا الحلوة', snippet: 'وصفة غريبة ولذيذة في آن واحد.' },
+                { title: 'كيف تتنبأ بالطقس من شكل السحاب', snippet: 'مهارة عشوائية قديمة.' },
+                { title: 'ألعاب ورقية للشعور بالملل', snippet: 'أفكار بسيطة من مواد عشوائية.' }
             ];
 
             const filtered = samplePosts.filter(post =>
@@ -649,12 +647,12 @@
             resultsContainer.innerHTML = '';
             if (filtered.length === 0) {
                 resultsContainer.innerHTML =
-                    '<p style="text-align:center;color:#636e72;">😕 لا توجد نتائج تطابق بحثك. جرب كلمات مفتاحية أخرى.</p>';
+                    '<p style="text-align:center;color:#636e72;">😵 لم نجد شيئًا بهذه العشوائية... جرب كلمة أخرى!</p>';
             } else {
                 filtered.forEach(post => {
                     const card = document.createElement('div');
                     card.className = 'result-card';
-                    card.innerHTML = `<h3>📄 ${post.title}</h3><p>${post.snippet}</p>`;
+                    card.innerHTML = `<h3>📌 ${post.title}</h3><p>${post.snippet}</p>`;
                     resultsContainer.appendChild(card);
                 });
             }
@@ -663,28 +661,23 @@
             resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        // معالجة نموذج التواصل (محاكاة)
         function handleContact(event) {
             event.preventDefault();
             const form = event.target;
             const name = form.querySelector('input[type="text"]').value.trim();
             if (name) {
-                alert(`شكراً ${name} ✨\nتم استلام رسالتك بنجاح، سنتواصل معك قريباً.`);
+                alert(`شكراً ${name} 🎉\nفكرتك العشوائية وصلت! سنرد عليك بشكل عشوائي أيضاً.`);
                 form.reset();
             }
         }
 
-        // تفعيل البحث بزر Enter
         document.getElementById('searchInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                performSearch();
-            }
+            if (e.key === 'Enter') performSearch();
         });
 
-        // إظهار المقالات من مجلد posts لو وجدت (تحميل ديناميكي بسيط)
-        async function loadPostsFromFolder() {
+        // محاولة تحميل محتوى خارجي عشوائي إذا وجد
+        async function loadRandomPosts() {
             try {
-                // محاولة تحميل قائمة المقالات من ملف index.json في مجلد posts
                 const response = await fetch('posts/index.json');
                 if (!response.ok) return;
                 const postsList = await response.json();
@@ -695,22 +688,19 @@
                         const card = document.createElement('div');
                         card.className = 'post-card';
                         card.innerHTML = `
-                                    <div class="post-image">${post.icon || '📝'}</div>
-                                    <h3>${post.title}</h3>
-                                    <p>${post.excerpt || 'مقال تقني مميز من مدونة eashwayiy'}</p>
-                                    <a href="posts/${post.slug}.html" class="read-more">اقرأ المزيد ←</a>
-                                `;
+                            <div class="post-image">${post.icon || '🎲'}</div>
+                            <h3>${post.title}</h3>
+                            <p>${post.excerpt || 'محتوى عشوائي رائع من eashwayiy'}</p>
+                            <a href="posts/${post.slug}.html" class="read-more">اكتشف ←</a>
+                        `;
                         postsContainer.appendChild(card);
                     });
                 }
             } catch (error) {
-                // في حال عدم وجود مجلد posts أو ملف index.json، تبقى المقالات الافتراضية
-                console.log('جارٍ استخدام المقالات الافتراضية (لم يتم العثور على posts/index.json)');
+                console.log('المقالات الافتراضية العشوائية قيد التشغيل.');
             }
         }
-
-        // تحميل المقالات عند جاهزية الصفحة
-        document.addEventListener('DOMContentLoaded', loadPostsFromFolder);
+        document.addEventListener('DOMContentLoaded', loadRandomPosts);
     </script>
 </body>
 </html>
