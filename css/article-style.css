@@ -16,7 +16,97 @@
     --transition-smooth: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1);
 }
 
-/* ========= حاوية المقالة العامة ========= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Cairo', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--soft-white);
+    color: var(--text-dark);
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+/* ========= شريط التنقل ========= */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.93);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 1rem 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--primary-green);
+    transition: var(--transition-smooth);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-brand h1 {
+    color: var(--primary-green);
+    font-size: 2.1rem;
+    letter-spacing: -1px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.nav-brand h1:hover {
+    color: var(--dark-green);
+    transform: scale(1.04);
+}
+
+.nav-brand h1 span {
+    background: var(--primary-green);
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.7rem;
+    border-radius: 30px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-right: 15px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 8px 18px;
+    border-radius: 30px;
+    transition: var(--transition-smooth);
+}
+
+.nav-links li a:hover {
+    color: var(--pure-white);
+    background: var(--primary-green);
+    box-shadow: 0 5px 18px rgba(39, 174, 96, 0.35);
+    transform: translateY(-2px);
+}
+
+/* ========= حاوية المقالة ========= */
 .article-container {
     max-width: 950px;
     margin: 3rem auto;
@@ -90,81 +180,6 @@
     transform: translateY(-2px);
 }
 
-/* ========= جدول المحتويات ========= */
-.table-of-contents {
-    background: linear-gradient(135deg, rgba(46, 204, 113, 0.08), rgba(39, 174, 96, 0.06));
-    padding: 2rem 2.2rem;
-    border-radius: var(--border-radius-md);
-    margin-bottom: 2.5rem;
-    border-right: 6px solid var(--primary-green);
-    box-shadow: 0 4px 18px rgba(39, 174, 96, 0.06);
-    transition: var(--transition-smooth);
-    position: relative;
-}
-
-.table-of-contents::before {
-    content: '📑';
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    font-size: 2rem;
-    background: var(--pure-white);
-    padding: 0.2rem;
-    border-radius: 50%;
-    box-shadow: var(--shadow);
-}
-
-.table-of-contents h3 {
-    color: var(--dark-green);
-    margin-bottom: 1.2rem;
-    text-align: right;
-    font-size: 1.4rem;
-    font-weight: 700;
-}
-
-.table-of-contents ul {
-    list-style: none;
-    text-align: right;
-    padding-right: 0.5rem;
-}
-
-.table-of-contents li {
-    padding: 0.6rem 0;
-    margin-right: 1.2rem;
-    border-bottom: 1px dashed rgba(39, 174, 96, 0.15);
-    transition: var(--transition-smooth);
-}
-
-.table-of-contents li:last-child {
-    border-bottom: none;
-}
-
-.table-of-contents a {
-    color: var(--text-dark);
-    text-decoration: none;
-    transition: var(--transition-smooth);
-    font-weight: 600;
-    display: inline-block;
-    position: relative;
-}
-
-.table-of-contents a::before {
-    content: '▹';
-    color: var(--primary-green);
-    margin-left: 0.6rem;
-    transition: var(--transition-smooth);
-}
-
-.table-of-contents a:hover {
-    color: var(--primary-green);
-    padding-right: 12px;
-    transform: translateX(3px);
-}
-
-.table-of-contents a:hover::before {
-    color: var(--dark-green);
-}
-
 /* ========= محتوى المقال ========= */
 .article-content {
     max-width: 900px;
@@ -221,58 +236,10 @@
     text-align: justify;
 }
 
-/* ========= القوائم العامة ========= */
-.benefits-list,
-.disadvantages-list,
-.security-tips {
-    list-style: none;
-    text-align: right;
-    padding: 0;
-}
-
-.benefits-list li,
-.disadvantages-list li,
-.security-tips li {
-    padding: 1.3rem 1.5rem;
-    margin-bottom: 1rem;
-    background: var(--soft-white);
-    border-right: 5px solid var(--primary-green);
-    border-radius: var(--border-radius-sm);
-    color: var(--text-dark);
-    transition: var(--transition-smooth);
-    position: relative;
-    font-weight: 500;
-}
-
-.benefits-list li:hover,
-.disadvantages-list li:hover,
-.security-tips li:hover {
-    transform: translateX(-4px);
-    box-shadow: var(--shadow);
-    background: #f0faf3;
-    border-right-color: var(--dark-green);
-}
-
-.benefits-list li::before {
-    content: '✅ ';
-    margin-left: 0.7rem;
-}
-
-.disadvantages-list li::before {
-    content: '⚠️ ';
-    margin-left: 0.7rem;
-}
-
-.benefits-list strong,
-.disadvantages-list strong {
-    color: var(--dark-green);
-    font-weight: 700;
-}
-
-/* ========= قسم الخطوات ========= */
+/* ========= خطوات (كروت) ========= */
 .steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.8rem;
     margin: 2.5rem 0;
 }
@@ -294,7 +261,7 @@
     position: absolute;
     top: -10px;
     left: -10px;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 900;
     color: rgba(39, 174, 96, 0.06);
     pointer-events: none;
@@ -310,62 +277,45 @@
     color: var(--primary-green);
     margin-bottom: 0.9rem;
     font-weight: 700;
-    position: relative;
 }
 
-/* ========= كروت الصنابير ========= */
-.faucet-card {
-    background: var(--pure-white);
-    border: 1px solid #e0e0e0;
-    border-right: 6px solid var(--light-green);
-    padding: 1.8rem;
-    margin-bottom: 1.8rem;
+/* ========= قوائم الفوائد ========= */
+.benefits-list {
+    list-style: none;
+    text-align: right;
+    padding: 0;
+}
+
+.benefits-list li {
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 1rem;
+    background: var(--soft-white);
+    border-right: 5px solid var(--primary-green);
     border-radius: var(--border-radius-sm);
+    color: var(--text-dark);
     transition: var(--transition-smooth);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    font-weight: 500;
 }
 
-.faucet-card:hover {
-    box-shadow: var(--shadow-hover);
-    transform: translateX(-6px);
-    border-right-color: var(--primary-green);
-    background: #fafffc;
+.benefits-list li:hover {
+    transform: translateX(-4px);
+    box-shadow: var(--shadow);
+    background: #f0faf3;
+    border-right-color: var(--dark-green);
 }
 
-.faucet-card h3 {
+.benefits-list strong {
     color: var(--dark-green);
-    font-weight: 700;
 }
 
-.faucet-card strong {
-    color: var(--primary-green);
-}
-
-/* ========= كروت الاستراتيجيات ========= */
-.strategy {
-    background: linear-gradient(135deg, var(--accent-bg), #d0ebd6);
-    padding: 1.8rem;
-    margin-bottom: 1.8rem;
-    border-radius: var(--border-radius-sm);
-    border-right: 6px solid var(--primary-green);
-    transition: var(--transition-smooth);
-    box-shadow: 0 2px 12px rgba(39, 174, 96, 0.05);
-}
-
-.strategy:hover {
-    transform: scale(1.02);
-    box-shadow: var(--shadow-hover);
-}
-
-/* ========= نصائح المحترفين ========= */
+/* ========= نصائح برو ========= */
 .pro-tips {
     background: var(--pure-white);
-    padding: 2rem 2rem 1.5rem;
+    padding: 2rem;
     margin-top: 2rem;
     border-radius: var(--border-radius-md);
     border-right: 6px solid var(--light-green);
     box-shadow: var(--shadow);
-    list-style: none;
     transition: var(--transition-smooth);
 }
 
@@ -373,28 +323,12 @@
     box-shadow: var(--shadow-hover);
 }
 
-.pro-tips li {
+.pro-tips h3 {
+    color: var(--dark-green);
     margin-bottom: 1rem;
-    font-weight: 500;
-    color: var(--text-dark);
-    display: flex;
-    align-items: flex-start;
-    gap: 0.6rem;
 }
 
-.pro-tips li::before {
-    content: "✓";
-    color: var(--primary-green);
-    font-weight: bold;
-    font-size: 1.2rem;
-    background: var(--accent-bg);
-    padding: 0.2rem 0.6rem;
-    border-radius: 50%;
-    margin-left: 0.8rem;
-    flex-shrink: 0;
-}
-
-/* ========= قسم المشاركة ========= */
+/* ========= مشاركة ========= */
 .article-share {
     text-align: center;
     margin-top: 4.5rem;
@@ -405,10 +339,11 @@
     border: 1px solid rgba(39, 174, 96, 0.1);
 }
 
-.article-share h3 {
+.article-share p {
     color: var(--dark-green);
-    margin-bottom: 1.2rem;
-    font-size: 1.5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
 .share-btn {
@@ -431,103 +366,38 @@
     background: linear-gradient(135deg, var(--dark-green), #155a32);
 }
 
-.share-btn:active {
-    transform: translateY(-1px);
+/* ========= تذييل ========= */
+.footer {
+    background-color: var(--dark-green);
+    color: var(--pure-white);
+    text-align: center;
+    padding: 35px 0;
+    font-size: 1.05rem;
 }
 
-/* ========= أزرار التنقل بين المقالات (إضافة جديدة) ========= */
-.article-navigation {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 2px solid var(--accent-bg);
+.footer a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 600;
 }
 
-.nav-prev, .nav-next {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--primary-green);
-    text-decoration: none;
-    font-weight: 700;
-    transition: var(--transition-smooth);
-    padding: 0.8rem 1.5rem;
-    background: var(--accent-bg);
-    border-radius: 30px;
-}
-
-.nav-prev:hover, .nav-next:hover {
-    background: var(--primary-green);
-    color: white;
-    transform: translateX(-4px);
-    box-shadow: var(--shadow);
-}
-
-/* ========= تجاوب الموقع ========= */
+/* ========= تجاوب ========= */
 @media (max-width: 768px) {
     .article-container {
         margin: 1.5rem;
         padding: 2rem 1.2rem;
         border-radius: var(--border-radius-md);
     }
-    
     .article-header h1 {
         font-size: 1.9rem;
     }
-    
     .article-meta {
         gap: 1rem;
         flex-direction: column;
         align-items: center;
     }
-    
-    .article-meta span {
-        width: fit-content;
-    }
-    
-    .article-section h2 {
-        font-size: 1.5rem;
-    }
-    
-    .article-section h3 {
-        font-size: 1.2rem;
-    }
-    
     .steps {
         grid-template-columns: 1fr;
-        gap: 1.2rem;
-    }
-    
-    .table-of-contents {
-        padding: 1.5rem;
-    }
-    
-    .table-of-contents::before {
-        font-size: 1.5rem;
-        top: -10px;
-        right: -10px;
-    }
-    
-    .article-share {
-        padding: 2rem 1.5rem;
-    }
-    
-    .share-btn {
-        padding: 0.9rem 2rem;
-        font-size: 1rem;
-    }
-    
-    .article-navigation {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .nav-prev, .nav-next {
-        width: 100%;
-        justify-content: center;
     }
 }
 
@@ -537,19 +407,7 @@
         padding: 1.5rem 1rem;
         border-radius: var(--border-radius-sm);
     }
-    
     .article-header h1 {
         font-size: 1.5rem;
-    }
-    
-    .article-section p {
-        text-align: right;
-        font-size: 1rem;
-    }
-    
-    .benefits-list li,
-    .disadvantages-list li,
-    .security-tips li {
-        padding: 1rem 1.2rem;
     }
 }
