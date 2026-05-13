@@ -4,43 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>eashwayiy — عالم جديد من الأفكار</title>
-  
-  <!-- Fonts: Cairo for Arabic, Montserrat for Numbers -->
+  <!-- خط كايرو العربي -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Montserrat:wght@800&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #fafafa;
+      --bg: #fff;
       --white: #fff;
-      --black: #232323;
-      --primary: #ffe047;        /* أصفر هادئ */
-      --secondary: #00bdd6;      /* سيان أكثر هدوء */
-      --accent: #ff3971;
-      --success: #00b773;
-      --shadow: 6px 6px 0px #232323;
+      --black: #1a1a1a;
+      --border: #e0ebe1;
+      --primary: #10b981;      /* أخضر فاخر */
+      --primary-dark: #059669; /* أخضر داكن للهوفر */
+      --accent: #16a34a;       /* لون تمييز أخضر مختلف */
       --radius: 14px;
       --font-main: 'Cairo', sans-serif;
+      --shadow: 6px 6px 0px #ebecec;
     }
-    *, *::before, *::after { box-sizing: border-box; }
+    *, *::before, *::after {box-sizing: border-box;}
     body {
-      padding: 0; margin: 0;
-      font-family: var(--font-main);
       background: var(--bg);
       color: var(--black);
-      min-height: 100vh;
+      font-family: var(--font-main);
       line-height: 1.7;
+      margin: 0;
+      min-height: 100vh;
     }
     .container {
       max-width: 960px;
       margin: 0 auto;
       padding: 0 1.5rem;
     }
-
-    /* ==== NAVBAR ==== */
+    /* ========== الهيدر ========== */
     header {
       background: var(--white);
-      border-bottom: 3px solid var(--black);
+      border-bottom: 2px solid var(--primary);
       box-shadow: var(--shadow);
       position: sticky;
       top: 0;
@@ -48,18 +45,19 @@
     }
     nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       padding: 1.2rem 0;
     }
     .logo {
       font-weight: 900;
       font-size: 2rem;
+      color: var(--accent);
       letter-spacing: -1px;
-      color: var(--black);
     }
     .logo span {
       background: var(--primary);
+      color: #fff;
       padding: 0 8px;
       border-radius: 6px;
       margin-inline: 3px;
@@ -71,200 +69,149 @@
       margin: 0;
     }
     .nav-links a {
-      color: var(--black);
+      color: var(--primary);
       font-weight: 800;
-      padding: 5px 16px;
+      padding: 4px 16px;
       border-radius: 6px;
       text-decoration: none;
       transition: background 0.2s, color 0.2s;
     }
-    .nav-links a:focus,
-    .nav-links a:hover {
-      background: var(--secondary);
-      color: var(--white);
+    .nav-links a:hover,
+    .nav-links a:focus {
+      background: var(--accent);
+      color: #fff;
     }
     .search-btn {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 900;
       background: var(--primary);
-      border: 2px solid var(--black);
+      color: #fff;
+      border: none;
       border-radius: 5px;
-      padding: 3px 14px;
+      padding: 5px 16px;
       cursor: pointer;
-      transition: box-shadow 0.2s;
+      transition: background 0.2s;
     }
-    .search-btn:hover { box-shadow: 3px 3px 0 var(--black); }
-
-    /* ==== HERO ==== */
+    .search-btn:hover { background: var(--primary-dark);}
+    /* ========== هيرو ========== */
     .hero {
       text-align: center;
-      padding: 60px 0 38px;
+      padding: 54px 0 36px;
     }
     .hero-title {
-      font-size: clamp(2.7rem, 5.5vw, 4.5rem);
+      font-size: clamp(2.3rem, 5vw, 4rem);
       font-weight: 900;
-      color: var(--white);
-      text-shadow: 5px 5px 0 var(--black);
-      -webkit-text-stroke: 2px var(--black);
+      color: var(--primary);
       margin-bottom: 14px;
+      letter-spacing: 0.5px;
     }
     .hero-box {
       display: inline-block;
-      background: var(--primary);
-      border: 3px solid var(--black);
+      background: var(--accent);
       border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 12px 36px;
-      font-size: 1.25rem;
+      color: #fff;
       font-weight: 700;
+      font-size: 1.15rem;
+      padding: 10px 30px;
+      margin-top: 10px;
     }
-
-    /* ==== POSTS ==== */
+    /* ========== البطاقات ========== */
     .posts-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(290px,1fr));
-      gap: 32px;
-      padding: 40px 0;
+      gap: 30px;
+      padding: 38px 0 0;
       margin: 0;
     }
     .post-card {
       background: var(--white);
-      border: 2.5px solid var(--black);
+      border: 2px solid var(--border);
       box-shadow: var(--shadow);
       border-radius: var(--radius);
       display: flex;
       flex-direction: column;
       text-decoration: none;
       color: inherit;
-      transition: transform 0.22s, box-shadow 0.22s;
+      transition: transform 0.19s, box-shadow 0.19s, border 0.15s;
       overflow: hidden;
     }
     .post-card:hover {
-      transform: translate(-3px,-3px) scale(1.03);
-      box-shadow: 11px 11px 0px var(--accent);
-      border-color: var(--accent);
+      border: 2.5px solid var(--primary);
+      transform: translate(-2px,-2px) scale(1.03);
+      box-shadow: 8px 8px 0px var(--primary-dark);
     }
     .card-img {
-      background: #ededed;
-      border-bottom: 2.5px solid var(--black);
-      height: 175px;
+      background: #e9f6ef;
+      border-bottom: 2px solid var(--border);
+      height: 165px;
       overflow: hidden;
     }
     .card-img img {
       width: 100%; height: 100%; object-fit: cover;
-      transition: transform 0.17s;
+      transition: transform 0.12s;
     }
-    .post-card:hover .card-img img { transform: scale(1.06); }
-
+    .post-card:hover .card-img img { transform: scale(1.05);}
     .card-body {
-      padding: 18px 18px 12px 18px;
+      padding: 16px 15px 8px 15px;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
     }
     .card-category {
       align-self: flex-start;
-      border-radius: 5px;
-      padding: 2px 12px;
-      font-size: 0.88rem;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 20px;
+      padding: 3px 14px;
+      font-size: 0.9rem;
       font-weight: 900;
-      border: 2px solid var(--black);
-      margin-bottom: 12px;
+      margin-bottom: 11px;
+      margin-top: -9px;
     }
-    .cat-crypto   { background: var(--primary); }
-    .cat-ai       { background: var(--secondary); color: var(--white);}
-    .cat-health   { background: var(--success); color: var(--white);}
     .card-body h3 {
-      font-size: 1.18rem;
+      font-size: 1.11rem;
       font-weight: 800;
       margin-bottom: 7px;
       margin-top: 0;
+      color: var(--black);
     }
-    .card-body p { font-weight: 400; color: #444; }
-
+    .card-body p { font-weight: 400; color: #3c423e;}
     .card-footer {
-      background: var(--bg);
-      border-top: 2px dashed var(--black);
+      background: #f6fdfa;
+      border-top: 1.5px dashed var(--primary);
       font-weight: 700;
-      padding: 10px 18px;
+      padding: 10px 15px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 1.04rem;
+      font-size: 1.01rem;
       border-radius: 0 0 var(--radius) var(--radius);
     }
-
-    /* ==== NEWSLETTER ==== */
-    .newsletter {
-      background: var(--accent);
-      color: var(--white);
-      border: 4px solid var(--black);
-      border-radius: var(--radius);
-      box-shadow: 10px 10px 0 var(--black);
-      padding: 44px 20px 38px 20px;
-      margin: 54px 0 0;
-      text-align: center;
-    }
-    .newsletter h2 { 
-      font-size: 2.1rem;
-      font-weight: 900;
-      -webkit-text-stroke: 1.5px var(--black);
-      margin-bottom: 18px;
-    }
-    .newsletter p { margin-bottom: 17px; font-weight: 700;}
-    .newsletter form {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-    }
-    .newsletter input[type="email"] {
-      padding: 13px;
-      border: 2.5px solid var(--black);
-      border-radius: 6px;
-      min-width: 220px;
-      font-family: inherit;
-      font-weight: 700;
-      outline: none;
-    }
-    .newsletter button {
-      padding: 13px 28px;
-      border-radius: 6px;
-      border: 2.5px solid var(--black);
-      background: var(--primary);
-      color: var(--black);
-      font-weight: 900;
-      font-size: 1rem;
-      cursor: pointer;
-      box-shadow: 3px 3px 0 var(--black);
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-    .newsletter button:hover { transform: translate(-1.5px,-1.5px); box-shadow: 6px 6px 0 var(--black); }
-
-    /* ==== FOOTER ==== */
+    .more-link { color: var(--accent);}
+    /* ========== الفوتر ========== */
     footer {
-      background: var(--black);
-      color: var(--white);
+      background: var(--primary);
+      color: #fff;
       text-align: center;
-      padding: 40px 0 30px 0;
-      margin-top: 60px;
-      border-top: 2px solid var(--primary);
+      padding: 36px 0 18px 0;
+      margin-top: 56px;
+      border-top: 2px solid var(--accent);
+      border-radius: var(--radius) var(--radius) 0 0;
     }
-    .footer-title {font-size: 1.4rem;font-weight: bold;letter-spacing:1px;margin-bottom:10px;}
-    .footer-note {opacity: 0.87;}
-
-    /* ==== RESPONSIVE ==== */
+    .footer-title {font-size: 1.3rem;font-weight: bold;letter-spacing:1px;margin-bottom:8px;}
+    .footer-note {opacity: 0.90;}
+    /* ========== استجابة الشاشات الصغيرة ========== */
     @media (max-width: 600px) {
-      .container { padding: 0 8px; }
-      nav { flex-direction: column; gap: 12px;}
-      .hero-title { font-size: 2.1rem; -webkit-text-stroke: 1px var(--black);}
-      .newsletter {padding: 27px 7px;}
-      .posts-grid { gap: 17px; }
-      .card-img { height: 115px;}
-      .card-body { padding: 11px 9px 7px 9px;}
-      .card-footer { padding: 7px 9px; font-size: 0.99rem;}
+      .container { padding: 0 7px; }
+      nav { flex-direction: column;gap: 12px;}
+      .hero-title { font-size: 1.7rem;}
+      .hero { padding:28px 0 30px;}
+      .hero-box { font-size: 0.99rem; padding: 8px 19px;}
+      .posts-grid { gap: 14px; padding: 20px 0 0;}
+      .card-img { height: 93px;}
+      .card-body { padding: 9px 8px 5px 8px;}
+      .card-footer { padding: 7px 8px; font-size: 0.93rem;}
+      footer { padding: 21px 0 10px 0;}
     }
     @media (max-width: 900px) {
       .posts-grid { grid-template-columns: 1fr;}
@@ -304,13 +251,13 @@
           <img src="https://img.freepik.com/free-vector/refer-friend-concept-illustration_114360-7039.jpg" alt="">
         </div>
         <div class="card-body">
-          <div class="card-category cat-crypto">عملات رقمية</div>
+          <div class="card-category">عملات رقمية</div>
           <h3>سر الدخل السلبي: مضاعفة أرباح الصنابير</h3>
           <p>تعلم كيف تجعل الروابط تعمل لأجلك 24 ساعة في اليوم بدون توقف.</p>
         </div>
         <div class="card-footer">
           <span>📅 مايو 2026</span>
-          <span style="color:var(--accent)">اقرأ المزيد ←</span>
+          <span class="more-link">اقرأ المزيد ←</span>
         </div>
       </a>
 
@@ -320,13 +267,13 @@
           <img src="https://img.freepik.com/free-photo/ai-technology-brain-background-digital-transformation-concept_53876-124671.jpg" alt="">
         </div>
         <div class="card-body">
-          <div class="card-category cat-ai">ذكاء اصطناعي</div>
+          <div class="card-category">ذكاء اصطناعي</div>
           <h3>أدوات الذكاء الاصطناعي في 2026</h3>
           <p>دليل شامل لأهم الأدوات التي ستغير طريقة عملك وحياتك هذا العام.</p>
         </div>
         <div class="card-footer">
           <span>📅 مايو 2026</span>
-          <span style="color:var(--accent)">اقرأ المزيد ←</span>
+          <span class="more-link">اقرأ المزيد ←</span>
         </div>
       </a>
 
@@ -336,26 +283,17 @@
           <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=600&q=80" alt="">
         </div>
         <div class="card-body">
-          <div class="card-category cat-health">صحة</div>
+          <div class="card-category">صحة</div>
           <h3>فوائد الاستحمام بالماء البارد</h3>
           <p>اكتشف العلم وراء هذه العادة البسيطة وتأثيرها المذهل على دماغك.</p>
         </div>
         <div class="card-footer">
           <span>📅 مايو 2026</span>
-          <span style="color:var(--accent)">اقرأ المزيد ←</span>
+          <span class="more-link">اقرأ المزيد ←</span>
         </div>
       </a>
 
     </div>
-
-    <section class="newsletter" aria-label="الاشتراك بالقائمة البريدية">
-      <h2>انضم إلى القائمة البريدية</h2>
-      <p>لا نرسل إلا المحتوى الذي يستحق وقتك فعلاً.</p>
-      <form onsubmit="event.preventDefault();alert('شكراً لثقتك!');">
-        <input type="email" placeholder="اكتب بريدك هنا..." required>
-        <button type="submit">سجلني الآن!</button>
-      </form>
-    </section>
   </main>
 
   <footer>
