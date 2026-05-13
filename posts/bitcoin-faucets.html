@@ -1,411 +1,1017 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="شرح مفصل عن كيفية ربح البيتكوين من صنابير البيتكوين (Faucets) - أفضل طرق الحصول على عملات رقمية مجانية وأماكن موثوقة وآمنة">
-    <meta name="keywords" content="البيتكوين، صنابير البيتكوين، ربح البيتكوين، عملات رقمية، كريبتو، Faucets، عملات مجانية، blockchain، إربح أموال">
-    <meta name="author" content="عاشوايي">
-    <meta property="og:title" content="ربح البيتكوين من صنابير البيتكوين - شرح شامل">
-    <meta property="og:description" content="دليل كامل لربح البيتكوين من خلال صنابير البيتكوين الموثوقة والآمنة">
-    <title>ربح البيتكوين من صنابير البيتكوين - مدونة عاشوايي</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/article-style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="شرح مفصل عن كيفية ربح البيتكوين من صنابير البيتكوين (Faucets) - أفضل طرق الحصول على عملات رقمية مجانية وأماكن موثوقة وآمنة">
+    <meta name="keywords" content="البيتكوين، صنابير البيتكوين، ربح البيتكوين، عملات رقمية، كريبتو، Faucets، عملات مجانية، blockchain، إربح أموال">
+    <meta name="author" content="eashwayiy">
+    <meta property="og:title" content="ربح البيتكوين من صنابير البيتكوين - شرح شامل | eashwayiy">
+    <meta property="og:description" content="دليل كامل لربح البيتكوين من خلال صنابير البيتكوين الموثوقة والآمنة">
+    <title>ربح البيتكوين من صنابير البيتكوين • eashwayiy</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <style>
+        /* ========= إعدادات المتغيرات - ثيم الأخضر والأبيض ========= */
+        :root {
+            --primary-green: #27ae60;
+            --light-green: #2ecc71;
+            --dark-green: #1e8449;
+            --soft-white: #f4f9f4;
+            --pure-white: #ffffff;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --accent-bg: #e8f5e9;
+            --shadow: 0 4px 20px rgba(39, 174, 96, 0.1);
+            --shadow-hover: 0 12px 35px rgba(39, 174, 96, 0.18);
+            --border-radius-lg: 24px;
+            --border-radius-md: 16px;
+            --border-radius-sm: 12px;
+            --transition-smooth: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Cairo', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--soft-white);
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        /* ========= شريط التنقل (مطابق للصفحة الرئيسية) ========= */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.93);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--primary-green);
+            transition: var(--transition-smooth);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-brand h1 {
+            color: var(--primary-green);
+            font-size: 2.1rem;
+            letter-spacing: -1px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+        }
+        .nav-brand h1:hover {
+            color: var(--dark-green);
+            transform: scale(1.04);
+        }
+        .nav-brand h1 span {
+            background: var(--primary-green);
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 8px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            margin-right: 15px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 8px 18px;
+            border-radius: 30px;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links li a:hover {
+            color: var(--pure-white);
+            background: var(--primary-green);
+            box-shadow: 0 5px 18px rgba(39, 174, 96, 0.35);
+            transform: translateY(-2px);
+        }
+
+        /* ========= حاوية المقالة ========= */
+        .article-container {
+            max-width: 950px;
+            margin: 3rem auto;
+            padding: 3rem 2.5rem;
+            background: var(--pure-white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(39, 174, 96, 0.08);
+            transition: var(--transition-smooth);
+        }
+
+        .article-container:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* ========= رأس المقالة ========= */
+        .article-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 3px solid var(--primary-green);
+            position: relative;
+        }
+
+        .article-header::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 6px;
+            background: var(--light-green);
+            border-radius: 6px;
+        }
+
+        .article-header h1 {
+            font-size: 2.8rem;
+            color: var(--dark-green);
+            margin-bottom: 1.2rem;
+            line-height: 1.4;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--accent-bg);
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+        }
+
+        .article-meta span:hover {
+            background: #d4efdf;
+            color: var(--dark-green);
+            transform: translateY(-2px);
+        }
+
+        /* ========= جدول المحتويات ========= */
+        .table-of-contents {
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.08), rgba(39, 174, 96, 0.06));
+            padding: 2rem 2.2rem;
+            border-radius: var(--border-radius-md);
+            margin-bottom: 2.5rem;
+            border-right: 6px solid var(--primary-green);
+            box-shadow: 0 4px 18px rgba(39, 174, 96, 0.06);
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .table-of-contents::before {
+            content: '📑';
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            font-size: 2rem;
+            background: var(--pure-white);
+            padding: 0.2rem;
+            border-radius: 50%;
+            box-shadow: var(--shadow);
+        }
+
+        .table-of-contents h3 {
+            color: var(--dark-green);
+            margin-bottom: 1.2rem;
+            text-align: right;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .table-of-contents ul {
+            list-style: none;
+            text-align: right;
+            padding-right: 0.5rem;
+        }
+
+        .table-of-contents li {
+            padding: 0.6rem 0;
+            margin-right: 1.2rem;
+            border-bottom: 1px dashed rgba(39, 174, 96, 0.15);
+            transition: var(--transition-smooth);
+        }
+
+        .table-of-contents li:last-child {
+            border-bottom: none;
+        }
+
+        .table-of-contents a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            font-weight: 600;
+            display: inline-block;
+            position: relative;
+        }
+
+        .table-of-contents a::before {
+            content: '▹';
+            color: var(--primary-green);
+            margin-left: 0.6rem;
+            transition: var(--transition-smooth);
+        }
+
+        .table-of-contents a:hover {
+            color: var(--primary-green);
+            padding-right: 12px;
+            transform: translateX(3px);
+        }
+
+        .table-of-contents a:hover::before {
+            color: var(--dark-green);
+        }
+
+        /* ========= محتوى المقال ========= */
+        .article-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: right;
+        }
+
+        .article-section {
+            margin-bottom: 3.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+            transition: var(--transition-smooth);
+        }
+
+        .article-section:last-child {
+            border-bottom: none;
+            margin-bottom: 1rem;
+        }
+
+        .article-section h2 {
+            color: var(--primary-green);
+            font-size: 1.9rem;
+            margin-bottom: 1.6rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 2px solid var(--accent-bg);
+            font-weight: 700;
+            position: relative;
+        }
+
+        .article-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--light-green);
+            border-radius: 3px;
+        }
+
+        .article-section h3 {
+            color: var(--dark-green);
+            font-size: 1.4rem;
+            margin-bottom: 0.9rem;
+            margin-top: 1.8rem;
+            font-weight: 700;
+        }
+
+        .article-section p {
+            color: var(--text-dark);
+            margin-bottom: 1.3rem;
+            line-height: 2;
+            font-size: 1.08rem;
+            text-align: justify;
+        }
+
+        /* ========= القوائم ========= */
+        .benefits-list,
+        .disadvantages-list,
+        .security-tips {
+            list-style: none;
+            text-align: right;
+            padding: 0;
+        }
+
+        .benefits-list li,
+        .disadvantages-list li,
+        .security-tips li {
+            padding: 1.3rem 1.5rem;
+            margin-bottom: 1rem;
+            background: var(--soft-white);
+            border-right: 5px solid var(--primary-green);
+            border-radius: var(--border-radius-sm);
+            color: var(--text-dark);
+            transition: var(--transition-smooth);
+            position: relative;
+            font-weight: 500;
+        }
+
+        .benefits-list li:hover,
+        .disadvantages-list li:hover,
+        .security-tips li:hover {
+            transform: translateX(-4px);
+            box-shadow: var(--shadow);
+            background: #f0faf3;
+            border-right-color: var(--dark-green);
+        }
+
+        .benefits-list li::before {
+            content: '✅ ';
+            margin-left: 0.7rem;
+        }
+
+        .disadvantages-list li::before {
+            content: '⚠️ ';
+            margin-left: 0.7rem;
+        }
+
+        .benefits-list strong,
+        .disadvantages-list strong {
+            color: var(--dark-green);
+            font-weight: 700;
+        }
+
+        /* ========= الخطوات ========= */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.8rem;
+            margin: 2.5rem 0;
+        }
+
+        .step {
+            background: var(--accent-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius-md);
+            border-top: 5px solid var(--primary-green);
+            text-align: right;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step::before {
+            content: attr(data-step);
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            font-size: 5rem;
+            font-weight: 900;
+            color: rgba(39, 174, 96, 0.06);
+            pointer-events: none;
+        }
+
+        .step:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 30px rgba(39, 174, 96, 0.15);
+            background: #d4efdf;
+        }
+
+        .step h3 {
+            color: var(--primary-green);
+            margin-bottom: 0.9rem;
+            font-weight: 700;
+            position: relative;
+        }
+
+        /* ========= كروت الصنابير ========= */
+        .faucet-card {
+            background: var(--pure-white);
+            border: 1px solid #e0e0e0;
+            border-right: 6px solid var(--light-green);
+            padding: 1.8rem;
+            margin-bottom: 1.8rem;
+            border-radius: var(--border-radius-sm);
+            transition: var(--transition-smooth);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .faucet-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateX(-6px);
+            border-right-color: var(--primary-green);
+            background: #fafffc;
+        }
+
+        .faucet-card h3 {
+            color: var(--dark-green);
+            font-weight: 700;
+        }
+
+        .faucet-card strong {
+            color: var(--primary-green);
+        }
+
+        .faucet-link {
+            color: var(--primary-green);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px dashed var(--primary-green);
+            transition: var(--transition-smooth);
+        }
+
+        .faucet-link:hover {
+            color: var(--dark-green);
+            border-bottom: 1px solid var(--dark-green);
+        }
+
+        /* ========= روابط مهمة إضافية ========= */
+        .links-category {
+            background: var(--soft-white);
+            padding: 1.8rem;
+            border-radius: var(--border-radius-sm);
+            margin-bottom: 1.5rem;
+            border-right: 5px solid var(--primary-green);
+            transition: var(--transition-smooth);
+        }
+        .links-category:hover {
+            background: #f0faf3;
+            transform: translateX(-3px);
+        }
+        .links-category h3 {
+            color: var(--dark-green);
+            margin-bottom: 0.8rem;
+        }
+        .important-links-list {
+            list-style: none;
+            padding-right: 1rem;
+        }
+        .important-links-list li {
+            padding: 0.4rem 0;
+        }
+        .important-links-list a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .important-links-list a:hover {
+            color: var(--primary-green);
+            text-decoration: underline;
+        }
+
+        /* ========= الاستراتيجيات ========= */
+        .strategy {
+            background: linear-gradient(135deg, var(--accent-bg), #d0ebd6);
+            padding: 1.8rem;
+            margin-bottom: 1.8rem;
+            border-radius: var(--border-radius-sm);
+            border-right: 6px solid var(--primary-green);
+            transition: var(--transition-smooth);
+            box-shadow: 0 2px 12px rgba(39, 174, 96, 0.05);
+        }
+
+        .strategy:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* ========= نصائح المحترفين ========= */
+        .pro-tips {
+            background: var(--pure-white);
+            padding: 2rem 2rem 1.5rem;
+            margin-top: 2rem;
+            border-radius: var(--border-radius-md);
+            border-right: 6px solid var(--light-green);
+            box-shadow: var(--shadow);
+            list-style: none;
+            transition: var(--transition-smooth);
+        }
+
+        .pro-tips:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .pro-tips li {
+            margin-bottom: 1rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+
+        .pro-tips li::before {
+            content: "✓";
+            color: var(--primary-green);
+            font-weight: bold;
+            font-size: 1.2rem;
+            background: var(--accent-bg);
+            padding: 0.2rem 0.6rem;
+            border-radius: 50%;
+            margin-left: 0.8rem;
+            flex-shrink: 0;
+        }
+
+        /* ========= طرق السحب ========= */
+        .withdrawal-method {
+            background: var(--pure-white);
+            border: 1px solid #e0e0e0;
+            border-right: 5px solid var(--primary-green);
+            padding: 1.6rem;
+            margin-bottom: 1.5rem;
+            border-radius: var(--border-radius-sm);
+            transition: var(--transition-smooth);
+        }
+        .withdrawal-method:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateX(-4px);
+        }
+        .withdrawal-method h3 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+        .withdrawal-method ul {
+            list-style: disc;
+            padding-right: 1.5rem;
+            margin: 0.5rem 0;
+        }
+
+        /* ========= المشاركة ========= */
+        .article-share {
+            text-align: center;
+            margin-top: 4.5rem;
+            padding: 3.5rem;
+            background: linear-gradient(135deg, var(--accent-bg), #d4efdf);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(39, 174, 96, 0.1);
+        }
+
+        .article-share p {
+            color: var(--dark-green);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .share-btn {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            color: white;
+            border: none;
+            padding: 1.1rem 2.8rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.15rem;
+            transition: var(--transition-smooth);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
+            letter-spacing: 0.5px;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 28px rgba(39, 174, 96, 0.45);
+            background: linear-gradient(135deg, var(--dark-green), #155a32);
+        }
+
+        /* ========= تذييل ========= */
+        .footer {
+            background-color: var(--dark-green);
+            color: var(--pure-white);
+            text-align: center;
+            padding: 35px 0;
+            font-size: 1.05rem;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        /* ========= تجاوب ========= */
+        @media (max-width: 768px) {
+            .article-container {
+                margin: 1.5rem;
+                padding: 2rem 1.2rem;
+                border-radius: var(--border-radius-md);
+            }
+            .article-header h1 {
+                font-size: 1.9rem;
+            }
+            .article-meta {
+                gap: 1rem;
+                flex-direction: column;
+                align-items: center;
+            }
+            .steps {
+                grid-template-columns: 1fr;
+            }
+            .table-of-contents {
+                padding: 1.5rem;
+            }
+            .table-of-contents::before {
+                font-size: 1.5rem;
+                top: -10px;
+                right: -10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-container {
+                margin: 0.8rem;
+                padding: 1.5rem 1rem;
+                border-radius: var(--border-radius-sm);
+            }
+            .article-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <h1>🚀 عاشوايي</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="../index.html">الرئيسية</a></li>
-                <li><a href="../index.html#posts">المقالات</a></li>
-                <li><a href="../index.html#about">حول</a></li>
-                <li><a href="../index.html#contact">تواصل</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- شريط التنقل (eashwayiy) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🎲 eashwayiy<span>.</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="../index.html#posts">عشوائيات</a></li>
+                <li><a href="../index.html#about">عن العشوائية</a></li>
+                <li><a href="../index.html#contact">تواصل عشوائي</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <!-- Article Content -->
-    <article class="article-container">
-        <div class="container">
-            <div class="article-header">
-                <h1>💰 ربح البيتكوين من صنابير البيتكوين - دليل شامل 2026</h1>
-                <div class="article-meta">
-                    <span>📅 تاريخ النشر: 13 مايو 2026</span>
-                    <span>👤 الكاتب: عاشوايي</span>
-                    <span>⏱️ وقت القراءة: 10 دقائق</span>
-                </div>
-            </div>
+    <!-- محتوى المقالة -->
+    <article class="article-container">
+        <div class="container">
+            <div class="article-header">
+                <h1>💰 ربح البيتكوين من صنابير البيتكوين - دليل شامل 2026</h1>
+                <div class="article-meta">
+                    <span>📅 تاريخ النشر: 13 مايو 2026</span>
+                    <span>👤 الكاتب: eashwayiy</span>
+                    <span>⏱️ وقت القراءة: 10 دقائق</span>
+                </div>
+            </div>
 
-            <div class="article-content">
-                <!-- جدول المحتويات -->
-                <div class="table-of-contents">
-                    <h3>📑 جدول المحتويات</h3>
-                    <ul>
-                        <li><a href="#what-is-faucet">ما هي صنابير البيتكوين؟</a></li>
-                        <li><a href="#how-work">كيف تعمل صنابير البيتكوين؟</a></li>
-                        <li><a href="#advantages">مميزات صنابير البيتكوين</a></li>
-                        <li><a href="#disadvantages">عيوب صنابير البيتكوين</a></li>
-                        <li><a href="#best-faucets">أفضل صنابير البيتكوين الموثوقة</a></li>
-                        <li><a href="#earning-strategies">استراتيجيات زيادة الأرباح</a></li>
-                        <li><a href="#security-tips">نصائح الأمان والحماية</a></li>
-                        <li><a href="#withdrawal">طرق سحب الأموال</a></li>
-                    </ul>
-                </div>
+            <div class="article-content">
+                <!-- جدول المحتويات -->
+                <div class="table-of-contents">
+                    <h3>📑 جدول المحتويات</h3>
+                    <ul>
+                        <li><a href="#what-is-faucet">ما هي صنابير البيتكوين؟</a></li>
+                        <li><a href="#how-work">كيف تعمل صنابير البيتكوين؟</a></li>
+                        <li><a href="#advantages">مميزات صنابير البيتكوين</a></li>
+                        <li><a href="#disadvantages">عيوب صنابير البيتكوين</a></li>
+                        <li><a href="#best-faucets">أفضل صنابير البيتكوين الموثوقة</a></li>
+                        <li><a href="#earning-strategies">استراتيجيات زيادة الأرباح</a></li>
+                        <li><a href="#security-tips">نصائح الأمان والحماية</a></li>
+                        <li><a href="#withdrawal">طرق سحب الأموال</a></li>
+                    </ul>
+                </div>
 
-                <!-- ما هي صنابير البيتكوين -->
-                <section id="what-is-faucet" class="article-section">
-                    <h2>🔷 ما هي صنابير البيتكوين؟</h2>
-                    <p>
-                        صنابير البيتكوين (Bitcoin Faucets) هي مواقع وتطبيقات إلكترونية توفر للمستخدمين فرصة الحصول على كميات صغيرة من البيتكوين بشكل مجاني. 
-                        تعتمد هذه الصنابير على نموذج إعلاني حيث تحصل المواقع على رسوم من الشركات المعلنة، وبالمقابل توزع جزءاً من هذه الأرباح على المستخدمين.
-                    </p>
-                    <p>
-                        الفكرة الأساسية بسيطة: أنت تزور الموقع، تشاهد إعلانات، تحل كابتشا، وتقوم ببعض المهام البسيطة، وفي المقابل تحصل على كسور من البيتكوين (Satoshi).
-                    </p>
-                </section>
+                <!-- ما هي صنابير البيتكوين -->
+                <section id="what-is-faucet" class="article-section">
+                    <h2>🔷 ما هي صنابير البيتكوين؟</h2>
+                    <p>
+                        صنابير البيتكوين (Bitcoin Faucets) هي مواقع وتطبيقات إلكترونية توفر للمستخدمين فرصة الحصول على كميات صغيرة من البيتكوين بشكل مجاني. 
+                        تعتمد هذه الصنابير على نموذج إعلاني حيث تحصل المواقع على رسوم من الشركات المعلنة، وبالمقابل توزع جزءاً من هذه الأرباح على المستخدمين.
+                    </p>
+                    <p>
+                        الفكرة الأساسية بسيطة: أنت تزور الموقع، تشاهد إعلانات، تحل كابتشا، وتقوم ببعض المهام البسيطة، وفي المقابل تحصل على كسور من البيتكوين (Satoshi).
+                    </p>
+                </section>
 
-                <!-- كيف تعمل صنابير البيتكوين -->
-                <section id="how-work" class="article-section">
-                    <h2>⚙️ كيف تعمل صنابير البيتكوين؟</h2>
-                    <div class="steps">
-                        <div class="step">
-                            <h3>الخطوة 1️⃣: التسجيل</h3>
-                            <p>أنشئ حسابك على موقع الصنبور بإدخال بريدك الإلكتروني ومحفظتك</p>
-                        </div>
-                        <div class="step">
-                            <h3>الخطوة 2️⃣: التحقق من الهوية</h3>
-                            <p>قم بتأكيد البريد الإلكتروني والتحقق الأولي من الحساب</p>
-                        </div>
-                        <div class="step">
-                            <h3>الخطوة 3️⃣: إكمال المهام</h3>
-                            <p>اشاهد الإعلانات وحل لغز الكابتشا وأكمل المهام المطلوبة</p>
-                        </div>
-                        <div class="step">
-                            <h3>الخطوة 4️⃣: جمع الأرباح</h3>
-                            <p>اجمع أرباحك (Satoshi) في محفظتك</p>
-                        </div>
-                        <div class="step">
-                            <h3>الخطوة 5️⃣: السحب</h3>
-                            <p>عند الوصول للحد الأدنى من الأرباح، قم بسحب البيتكوين إلى محفظتك</p>
-                        </div>
-                    </div>
-                </section>
+                <!-- كيف تعمل صنابير البيتكوين -->
+                <section id="how-work" class="article-section">
+                    <h2>⚙️ كيف تعمل صنابير البيتكوين؟</h2>
+                    <div class="steps">
+                        <div class="step" data-step="1">
+                            <h3>الخطوة 1️⃣: التسجيل</h3>
+                            <p>أنشئ حسابك على موقع الصنبور بإدخال بريدك الإلكتروني ومحفظتك</p>
+                        </div>
+                        <div class="step" data-step="2">
+                            <h3>الخطوة 2️⃣: التحقق من الهوية</h3>
+                            <p>قم بتأكيد البريد الإلكتروني والتحقق الأولي من الحساب</p>
+                        </div>
+                        <div class="step" data-step="3">
+                            <h3>الخطوة 3️⃣: إكمال المهام</h3>
+                            <p>اشاهد الإعلانات وحل لغز الكابتشا وأكمل المهام المطلوبة</p>
+                        </div>
+                        <div class="step" data-step="4">
+                            <h3>الخطوة 4️⃣: جمع الأرباح</h3>
+                            <p>اجمع أرباحك (Satoshi) في محفظتك</p>
+                        </div>
+                        <div class="step" data-step="5">
+                            <h3>الخطوة 5️⃣: السحب</h3>
+                            <p>عند الوصول للحد الأدنى من الأرباح، قم بسحب البيتكوين إلى محفظتك</p>
+                        </div>
+                    </div>
+                </section>
 
-                <!-- مميزات صنابير البيتكوين -->
-                <section id="advantages" class="article-section">
-                    <h2>✅ مميزات صنابير البيتكوين</h2>
-                    <ul class="benefits-list">
-                        <li>
-                            <strong>🆓 مجانية 100%:</strong> لا تحتاج لاستثمار أي أموال للبدء
-                        </li>
-                        <li>
-                            <strong>⏰ مرنة:</strong> تعمل في أي وقت ومن أي مكان
-                        </li>
-                        <li>
-                            <strong>🌍 عالمية:</strong> متاحة للجميع بغض النظر عن الدولة
-                        </li>
-                        <li>
-                            <strong>🛡️ آمنة نسبياً:</strong> إذا اخترت المواقع الموثوقة
-                        </li>
-                        <li>
-                            <strong>📱 سهلة الاستخدام:</strong> لا تتطلب معرفة تقنية متقدمة
-                        </li>
-                        <li>
-                            <strong>💰 تراكمية:</strong> تتراكم أرباحك بمرور الوقت
-                        </li>
-                    </ul>
-                </section>
+                <!-- مميزات صنابير البيتكوين -->
+                <section id="advantages" class="article-section">
+                    <h2>✅ مميزات صنابير البيتكوين</h2>
+                    <ul class="benefits-list">
+                        <li><strong>🆓 مجانية 100%:</strong> لا تحتاج لاستثمار أي أموال للبدء</li>
+                        <li><strong>⏰ مرنة:</strong> تعمل في أي وقت ومن أي مكان</li>
+                        <li><strong>🌍 عالمية:</strong> متاحة للجميع بغض النظر عن الدولة</li>
+                        <li><strong>🛡️ آمنة نسبياً:</strong> إذا اخترت المواقع الموثوقة</li>
+                        <li><strong>📱 سهلة الاستخدام:</strong> لا تتطلب معرفة تقنية متقدمة</li>
+                        <li><strong>💰 تراكمية:</strong> تتراكم أرباحك بمرور الوقت</li>
+                    </ul>
+                </section>
 
-                <!-- عيوب صنابير البيتكوين -->
-                <section id="disadvantages" class="article-section">
-                    <h2>⚠️ عيوب صنابير البيتكوين</h2>
-                    <ul class="disadvantages-list">
-                        <li>
-                            <strong>💸 أرباح منخفضة جداً:</strong> قد تحصل على بضعة سنتات فقط يومياً
-                        </li>
-                        <li>
-                            <strong>⏳ تستغرق وقتاً طويلاً:</strong> قد تستغرق أسابيع أو أشهر لجمع مبلغ محترم
-                        </li>
-                        <li>
-                            <strong>🌐 مواقع احتيالية:</strong> هناك العديد من المواقع الوهمية والاحتيالية
-                        </li>
-                        <li>
-                            <strong>📊 متطلبات عالية:</strong> بعض المواقع تطلب حد أدنى كبير للسحب
-                        </li>
-                        <li>
-                            <strong>🔄 تحديثات متكررة:</strong> قد توقف المواقع العمل فجأة
-                        </li>
-                        <li>
-                            <strong>⛔ قيود جغرافية:</strong> بعض المواقع لا تخدم دول معينة
-                        </li>
-                    </ul>
-                </section>
+                <!-- عيوب صنابير البيتكوين -->
+                <section id="disadvantages" class="article-section">
+                    <h2>⚠️ عيوب صنابير البيتكوين</h2>
+                    <ul class="disadvantages-list">
+                        <li><strong>💸 أرباح منخفضة جداً:</strong> قد تحصل على بضعة سنتات فقط يومياً</li>
+                        <li><strong>⏳ تستغرق وقتاً طويلاً:</strong> قد تستغرق أسابيع أو أشهر لجمع مبلغ محترم</li>
+                        <li><strong>🌐 مواقع احتيالية:</strong> هناك العديد من المواقع الوهمية والاحتيالية</li>
+                        <li><strong>📊 متطلبات عالية:</strong> بعض المواقع تطلب حد أدنى كبير للسحب</li>
+                        <li><strong>🔄 تحديثات متكررة:</strong> قد توقف المواقع العمل فجأة</li>
+                        <li><strong>⛔ قيود جغرافية:</strong> بعض المواقع لا تخدم دول معينة</li>
+                    </ul>
+                </section>
 
-                <!-- أفضل صنابير البيتكوين -->
-                <section id="best-faucets" class="article-section">
-                    <h2>🏆 أفضل صنابير البيتكوين الموثوقة</h2>
-                    
-                    <div class="faucet-card">
-                        <h3>1. 🥇 Coinbase Earn</h3>
-                        <p><strong>الحد الأدنى للسحب:</strong> بدون حد أدنى</p>
-                        <p><strong>معدل الأرباح:</strong> متغير حسب المهام (5$ إلى 100$ حسب الكورسات)</p>
-                        <p><strong>الوصف:</strong> منصة موثوقة من شركة عملاقة توفر أرباح عالية نسبياً لإكمال دورات تعليمية عن العملات الرقمية</p>
-                        <p><strong>🔗 رابط الموقع:</strong> <a href="https://www.coinbase.com/earn" target="_blank" class="faucet-link">https://www.coinbase.com/earn</a></p>
-                    </div>
+                <!-- أفضل صنابير البيتكوين -->
+                <section id="best-faucets" class="article-section">
+                    <h2>🏆 أفضل صنابير البيتكوين الموثوقة</h2>
+                    
+                    <div class="faucet-card">
+                        <h3>1. 🥇 Coinbase Earn</h3>
+                        <p><strong>الحد الأدنى للسحب:</strong> بدون حد أدنى</p>
+                        <p><strong>معدل الأرباح:</strong> متغير حسب المهام (5$ إلى 100$ حسب الكورسات)</p>
+                        <p><strong>الوصف:</strong> منصة موثوقة من شركة عملاقة توفر أرباح عالية نسبياً لإكمال دورات تعليمية عن العملات الرقمية</p>
+                        <p><strong>🔗 رابط الموقع:</strong> <a href="https://www.coinbase.com/earn" target="_blank" class="faucet-link">https://www.coinbase.com/earn</a></p>
+                    </div>
 
-                    <div class="faucet-card">
-                        <h3>2. 💎 FreeBitcoin</h3>
-                        <p><strong>الحد الأدنى للسحب:</strong> 30,000 Satoshi</p>
-                        <p><strong>معدل الأرباح:</strong> 5,000 - 10,000 Satoshi يومياً</p>
-                        <p><strong>الوصف:</strong> واحدة من أقدم وأكثر الصنابير موثوقية، توفر عجلة دوارة يومية وألعاب وإمكانية الربح من الإحالات</p>
-                        <p><strong>🔗 رابط الموقع:</strong> <a href="https://freebitco.in/" target="_blank" class="faucet-link">https://freebitco.in/</a></p>
-                    </div>
+                    <div class="faucet-card">
+                        <h3>2. 💎 FreeBitcoin</h3>
+                        <p><strong>الحد الأدنى للسحب:</strong> 30,000 Satoshi</p>
+                        <p><strong>معدل الأرباح:</strong> 5,000 - 10,000 Satoshi يومياً</p>
+                        <p><strong>الوصف:</strong> واحدة من أقدم وأكثر الصنابير موثوقية، توفر عجلة دوارة يومية وألعاب وإمكانية الربح من الإحالات</p>
+                        <p><strong>🔗 رابط الموقع:</strong> <a href="https://freebitco.in/" target="_blank" class="faucet-link">https://freebitco.in/</a></p>
+                    </div>
 
-                    <div class="faucet-card">
-                        <h3>3. ⚡ Bonus Bitcoin</h3>
-                        <p><strong>الحد الأدنى للسحب:</strong> 500 Satoshi</p>
-                        <p><strong>معدل الأرباح:</strong> يصل إلى 5,000 Satoshi يومياً</p>
-                        <p><strong>الوصف:</strong> صنبور موثوق يوفر نقاط مكافآت ويمكن تحويلها لعملات مختلفة مع عروض يومية متنوعة</p>
-                        <p><strong>🔗 رابط الموقع:</strong> <a href="https://bitcoinfaucet.bonus/" target="_blank" class="faucet-link">https://bitcoinfaucet.bonus/</a></p>
-                    </div>
+                    <div class="faucet-card">
+                        <h3>3. ⚡ Bonus Bitcoin</h3>
+                        <p><strong>الحد الأدنى للسحب:</strong> 500 Satoshi</p>
+                        <p><strong>معدل الأرباح:</strong> يصل إلى 5,000 Satoshi يومياً</p>
+                        <p><strong>الوصف:</strong> صنبور موثوق يوفر نقاط مكافآت ويمكن تحويلها لعملات مختلفة مع عروض يومية متنوعة</p>
+                        <p><strong>🔗 رابط الموقع:</strong> <a href="https://bitcoinfaucet.bonus/" target="_blank" class="faucet-link">https://bitcoinfaucet.bonus/</a></p>
+                    </div>
 
-                    <div class="faucet-card">
-                        <h3>4. 🎰 BitFun</h3>
-                        <p><strong>الحد الأدنى للسحب:</strong> 1,000 Satoshi</p>
-                        <p><strong>معدل الأرباح:</strong> متغير حسب الألعاب (100 - 10,000 Satoshi)</p>
-                        <p><strong>الوصف:</strong> موقع ممتع يجمع بين صنبور البيتكوين والألعاب التفاعلية مع جوائز يومية</p>
-                        <p><strong>🔗 رابط الموقع:</strong> <a href="https://bitfun.io/" target="_blank" class="faucet-link">https://bitfun.io/</a></p>
-                    </div>
+                    <div class="faucet-card">
+                        <h3>4. 🎰 BitFun</h3>
+                        <p><strong>الحد الأدنى للسحب:</strong> 1,000 Satoshi</p>
+                        <p><strong>معدل الأرباح:</strong> متغير حسب الألعاب (100 - 10,000 Satoshi)</p>
+                        <p><strong>الوصف:</strong> موقع ممتع يجمع بين صنبور البيتكوين والألعاب التفاعلية مع جوائز يومية</p>
+                        <p><strong>🔗 رابط الموقع:</strong> <a href="https://bitfun.io/" target="_blank" class="faucet-link">https://bitfun.io/</a></p>
+                    </div>
 
-                    <div class="faucet-card">
-                        <h3>5. 🔗 Claim Bitcoin</h3>
-                        <p><strong>الحد الأدنى للسحب:</strong> 100 Satoshi</p>
-                        <p><strong>معدل الأرباح:</strong> 100 - 5,000 Satoshi كل ساعة</p>
-                        <p><strong>الوصف:</strong> موقع بسيط وسريع مع نقرة واحدة والحد الأدنى منخفض جداً مما يسهل السحب المتكرر</p>
-                        <p><strong>🔗 رابط الموقع:</strong> <a href="https://claim-bitcoin.com/" target="_blank" class="faucet-link">https://claim-bitcoin.com/</a></p>
-                    </div>
+                    <div class="faucet-card">
+                        <h3>5. 🔗 Claim Bitcoin</h3>
+                        <p><strong>الحد الأدنى للسحب:</strong> 100 Satoshi</p>
+                        <p><strong>معدل الأرباح:</strong> 100 - 5,000 Satoshi كل ساعة</p>
+                        <p><strong>الوصف:</strong> موقع بسيط وسريع مع نقرة واحدة والحد الأدنى منخفض جداً مما يسهل السحب المتكرر</p>
+                        <p><strong>🔗 رابط الموقع:</strong> <a href="https://claim-bitcoin.com/" target="_blank" class="faucet-link">https://claim-bitcoin.com/</a></p>
+                    </div>
 
-                    <div class="faucet-card">
-                        <h3>6. 🎯 Moon Bitcoin</h3>
-                        <p><strong>الحد الأدنى للسحب:</strong> 30,000 Satoshi</p>
-                        <p><strong>معدل الأرباح:</strong> 3,000 - 8,000 Satoshi يومياً</p>
-                        <p><strong>الوصف:</strong> منصة شهيرة جداً توفر سحب سريع وآمن مع برنامج إحالة قوي وألعاب يومية</p>
-                        <p><strong>🔗 رابط الموقع:</strong> <a href="https://moonbitcoin.io/" target="_blank" class="faucet-link">https://moonbitcoin.io/</a></p>
-                    </div>
+                    <div class="faucet-card">
+                        <h3>6. 🎯 Moon Bitcoin</h3>
+                        <p><strong>الحد الأدنى للسحب:</strong> 30,000 Satoshi</p>
+                        <p><strong>معدل الأرباح:</strong> 3,000 - 8,000 Satoshi يومياً</p>
+                        <p><strong>الوصف:</strong> منصة شهيرة جداً توفر سحب سريع وآمن مع برنامج إحالة قوي وألعاب يومية</p>
+                        <p><strong>🔗 رابط الموقع:</strong> <a href="https://moonbitcoin.io/" target="_blank" class="faucet-link">https://moonbitcoin.io/</a></p>
+                    </div>
 
-                    <div class="faucet-card">
-                        <h3>7. 💰 Coin Tipper</h3>
-                        <p><strong>الحد الأدنى للسحب:</strong> 5,000 Satoshi</p>
-                        <p><strong>معدل الأرباح:</strong> يومي متغير</p>
-                        <p><strong>الوصف:</strong> صنبور متعدد العملات يدعم البيتكوين والدوجكوين وعملات أخرى مع واجهة سهلة الاستخدام</p>
-                        <p><strong>🔗 رابط الموقع:</strong> <a href="https://cointtipper.com/" target="_blank" class="faucet-link">https://cointtipper.com/</a></p>
-                    </div>
+                    <div class="faucet-card">
+                        <h3>7. 💰 Coin Tipper</h3>
+                        <p><strong>الحد الأدنى للسحب:</strong> 5,000 Satoshi</p>
+                        <p><strong>معدل الأرباح:</strong> يومي متغير</p>
+                        <p><strong>الوصف:</strong> صنبور متعدد العملات يدعم البيتكوين والدوجكوين وعملات أخرى مع واجهة سهلة الاستخدام</p>
+                        <p><strong>🔗 رابط الموقع:</strong> <a href="https://cointtipper.com/" target="_blank" class="faucet-link">https://cointtipper.com/</a></p>
+                    </div>
 
-                    <div class="faucet-card">
-                        <h3>8. 🔄 Satoshi Hero</h3>
-                        <p><strong>الحد الأدنى للسحب:</strong> 10,000 Satoshi</p>
-                        <p><strong>معدل الأرباح:</strong> 1,000 - 10,000 Satoshi يومياً</p>
-                        <p><strong>الوصف:</strong> موقع جديد وموثوق يقدم مهام متنوعة وألعاب ممتعة مع رسوم سحب منخفضة</p>
-                        <p><strong>🔗 رابط الموقع:</strong> <a href="https://satoshihero.com/" target="_blank" class="faucet-link">https://satoshihero.com/</a></p>
-                    </div>
-                </section>
+                    <div class="faucet-card">
+                        <h3>8. 🔄 Satoshi Hero</h3>
+                        <p><strong>الحد الأدنى للسحب:</strong> 10,000 Satoshi</p>
+                        <p><strong>معدل الأرباح:</strong> 1,000 - 10,000 Satoshi يومياً</p>
+                        <p><strong>الوصف:</strong> موقع جديد وموثوق يقدم مهام متنوعة وألعاب ممتعة مع رسوم سحب منخفضة</p>
+                        <p><strong>🔗 رابط الموقع:</strong> <a href="https://satoshihero.com/" target="_blank" class="faucet-link">https://satoshihero.com/</a></p>
+                    </div>
+                </section>
 
-                <!-- روابط مهمة إضافية -->
-                <section id="important-links" class="article-section">
-                    <h2>🔗 روابط مهمة ومفيدة</h2>
-                    
-                    <div class="links-category">
-                        <h3>🏦 محافظ البيتكوين الآمنة:</h3>
-                        <ul class="important-links-list">
-                            <li><a href="https://blockchain.com/" target="_blank">Blockchain.com - محفظة موثوقة وآمنة</a></li>
-                            <li><a href="https://www.ledger.com/" target="_blank">Ledger - محفظة هاردوير أمنة جداً</a></li>
-                            <li><a href="https://www.trezor.io/" target="_blank">Trezor - محفظة هاردوير موثوقة</a></li>
-                            <li><a href="https://electrum.org/" target="_blank">Electrum - محفظة برمجية خفيفة</a></li>
-                        </ul>
-                    </div>
+                <!-- روابط مهمة إضافية -->
+                <section id="important-links" class="article-section">
+                    <h2>🔗 روابط مهمة ومفيدة</h2>
+                    
+                    <div class="links-category">
+                        <h3>🏦 محافظ البيتكوين الآمنة:</h3>
+                        <ul class="important-links-list">
+                            <li><a href="https://blockchain.com/" target="_blank">Blockchain.com - محفظة موثوقة وآمنة</a></li>
+                            <li><a href="https://www.ledger.com/" target="_blank">Ledger - محفظة هاردوير أمنة جداً</a></li>
+                            <li><a href="https://www.trezor.io/" target="_blank">Trezor - محفظة هاردوير موثوقة</a></li>
+                            <li><a href="https://electrum.org/" target="_blank">Electrum - محفظة برمجية خفيفة</a></li>
+                        </ul>
+                    </div>
 
-                    <div class="links-category">
-                        <h3>💱 منصات تبادل موثوقة:</h3>
-                        <ul class="important-links-list">
-                            <li><a href="https://www.binance.com/" target="_blank">Binance - أكبر منصة تبادل عملات رقمية</a></li>
-                            <li><a href="https://www.coinbase.com/" target="_blank">Coinbase - منصة آمنة وموثوقة</a></li>
-                            <li><a href="https://kraken.com/" target="_blank">Kraken - منصة متقدمة وآمنة</a></li>
-                            <li><a href="https://www.kucoin.com/" target="_blank">KuCoin - منصة شاملة وسهلة</a></li>
-                        </ul>
-                    </div>
+                    <div class="links-category">
+                        <h3>💱 منصات تبادل موثوقة:</h3>
+                        <ul class="important-links-list">
+                            <li><a href="https://www.binance.com/" target="_blank">Binance - أكبر منصة تبادل عملات رقمية</a></li>
+                            <li><a href="https://www.coinbase.com/" target="_blank">Coinbase - منصة آمنة وموثوقة</a></li>
+                            <li><a href="https://kraken.com/" target="_blank">Kraken - منصة متقدمة وآمنة</a></li>
+                            <li><a href="https://www.kucoin.com/" target="_blank">KuCoin - منصة شاملة وسهلة</a></li>
+                        </ul>
+                    </div>
 
-                    <div class="links-category">
-                        <h3>🌐 موارد تعليمية:</h3>
-                        <ul class="important-links-list">
-                            <li><a href="https://bitcoin.org/" target="_blank">Bitcoin.org - الموقع الرسمي للبيتكوين</a></li>
-                            <li><a href="https://www.investopedia.com/bitcoin-4689525" target="_blank">Investopedia - تعليم الاستثمار والعملات</a></li>
-                            <li><a href="https://www.coindesk.com/" target="_blank">CoinDesk - أخبار العملات الرقمية</a></li>
-                        </ul>
-                    </div>
-                </section>
+                    <div class="links-category">
+                        <h3>🌐 موارد تعليمية:</h3>
+                        <ul class="important-links-list">
+                            <li><a href="https://bitcoin.org/" target="_blank">Bitcoin.org - الموقع الرسمي للبيتكوين</a></li>
+                            <li><a href="https://www.investopedia.com/bitcoin-4689525" target="_blank">Investopedia - تعليم الاستثمار والعملات</a></li>
+                            <li><a href="https://www.coindesk.com/" target="_blank">CoinDesk - أخبار العملات الرقمية</a></li>
+                        </ul>
+                    </div>
+                </section>
 
-                <!-- استراتيجيات زيادة الأرباح -->
-                <section id="earning-strategies" class="article-section">
-                    <h2>📈 استراتيجيات زيادة أرباحك من الصنابير</h2>
-                    
-                    <div class="strategy">
-                        <h3>1️⃣ استخدم عدة صنابير في نفس الوقت</h3>
-                        <p>لا تعتمد على صنبور واحد فقط. استخدم 3-5 صنابير موثوقة معاً لضاعفة أرباحك</p>
-                    </div>
+                <!-- استراتيجيات زيادة الأرباح -->
+                <section id="earning-strategies" class="article-section">
+                    <h2>📈 استراتيجيات زيادة أرباحك من الصنابير</h2>
+                    
+                    <div class="strategy">
+                        <h3>1️⃣ استخدم عدة صنابير في نفس الوقت</h3>
+                        <p>لا تعتمد على صنبور واحد فقط. استخدم 3-5 صنابير موثوقة معاً لضاعفة أرباحك</p>
+                    </div>
 
-                    <div class="strategy">
-                        <h3>2️⃣ حدد جدول زمني ثابت</h3>
-                        <p>اجعل للصنابير وقتاً ثابتاً كل يوم، مثلاً 30 دقيقة كل صباح</p>
-                    </div>
+                    <div class="strategy">
+                        <h3>2️⃣ حدد جدول زمني ثابت</h3>
+                        <p>اجعل للصنابير وقتاً ثابتاً كل يوم، مثلاً 30 دقيقة كل صباح</p>
+                    </div>
 
-                    <div class="strategy">
-                        <h3>3️⃣ استفد من العروض الخاصة</h3>
-                        <p>اتابع تنبيهات المواقع للعروض الخاصة والمكافآت الإضافية</p>
-                    </div>
+                    <div class="strategy">
+                        <h3>3️⃣ استفد من العروض الخاصة</h3>
+                        <p>اتابع تنبيهات المواقع للعروض الخاصة والمكافآت الإضافية</p>
+                    </div>
 
-                    <div class="strategy">
-                        <h3>4️⃣ شارك الرابط الخاص بك</h3>
-                        <p>معظم الصنابير توفر برنامج إحالة - شارك رابطك واحصل على عمولة من كل مستخدم جديد</p>
-                    </div>
+                    <div class="strategy">
+                        <h3>4️⃣ شارك الرابط الخاص بك</h3>
+                        <p>معظم الصنابير توفر برنامج إحالة - شارك رابطك واحصل على عمولة من كل مستخدم جديد</p>
+                    </div>
 
-                    <div class="strategy">
-                        <h3>5️⃣ استخدم VPN إذا لزم الأمر</h3>
-                        <p>بعض الصنابير متاحة في دول معينة فقط، استخدم VPN لتوسيع خيارتك</p>
-                    </div>
+                    <div class="strategy">
+                        <h3>5️⃣ استخدم VPN إذا لزم الأمر</h3>
+                        <p>بعض الصنابير متاحة في دول معينة فقط، استخدم VPN لتوسيع خيارتك</p>
+                    </div>
 
-                    <div class="strategy">
-                        <h3>6️⃣ شارك في مسابقات ومشاريع خاصة</h3>
-                        <p>بعض الصنابير توفر مسابقات أسبوعية وتحديات بمكافآت كبيرة</p>
-                    </div>
-                </section>
+                    <div class="strategy">
+                        <h3>6️⃣ شارك في مسابقات ومشاريع خاصة</h3>
+                        <p>بعض الصنابير توفر مسابقات أسبوعية وتحديات بمكافآت كبيرة</p>
+                    </div>
+                </section>
 
-                <!-- نصائح الأمان -->
-                <section id="security-tips" class="article-section">
-                    <h2>🔒 نصائح الأمان والحماية</h2>
-                    <ul class="security-tips">
-                        <li>
-                            <strong>✅ تحقق من المراجعات:</strong> ابحث عن تقييمات الموقع قبل التسجيل على Trustpilot و Reddit
-                        </li>
-                        <li>
-                            <strong>✅ استخدم بريد إلكتروني منفصل:</strong> أنشئ بريد خاص للصنابير فقط
-                        </li>
-                        <li>
-                            <strong>✅ لا تشارك كلمات مرورك:</strong> أبداً لا تعطي أحد كلمة مرورك
-                        </li>
-                        <li>
-                            <strong>✅ فعّل المصادقة الثنائية:</strong> إذا كان الموقع يوفرها
-                        </li>
-                        <li>
-                            <strong>✅ استخدم محفظة آمنة:</strong> استخدم محافظ موثوقة مثل Blockchain أو Ledger
-                        </li>
-                        <li>
-                            <strong>✅ توخ الحذر من الروابط المريبة:</strong> لا تنقر على روابط غريبة
-                        </li>
-                        <li>
-                            <strong>✅ اختبر برسوم صغيرة أولاً:</strong> اسحب مبلغ صغير أولاً للتأكد
-                        </li>
-                        <li>
-                            <strong>✅ تجنب المواقع التي تطلب معلومات شخصية:</strong> لا تعطهم بيانات حسابك البنكي
-                        </li>
-                    </ul>
-                </section>
+                <!-- نصائح الأمان -->
+                <section id="security-tips" class="article-section">
+                    <h2>🔒 نصائح الأمان والحماية</h2>
+                    <ul class="security-tips">
+                        <li><strong>✅ تحقق من المراجعات:</strong> ابحث عن تقييمات الموقع قبل التسجيل على Trustpilot و Reddit</li>
+                        <li><strong>✅ استخدم بريد إلكتروني منفصل:</strong> أنشئ بريد خاص للصنابير فقط</li>
+                        <li><strong>✅ لا تشارك كلمات مرورك:</strong> أبداً لا تعطي أحد كلمة مرورك</li>
+                        <li><strong>✅ فعّل المصادقة الثنائية:</strong> إذا كان الموقع يوفرها</li>
+                        <li><strong>✅ استخدم محفظة آمنة:</strong> استخدم محافظ موثوقة مثل Blockchain أو Ledger</li>
+                        <li><strong>✅ توخ الحذر من الروابط المريبة:</strong> لا تنقر على روابط غريبة</li>
+                        <li><strong>✅ اختبر برسوم صغيرة أولاً:</strong> اسحب مبلغ صغير أولاً للتأكد</li>
+                        <li><strong>✅ تجنب المواقع التي تطلب معلومات شخصية:</strong> لا تعطهم بيانات حسابك البنكي</li>
+                    </ul>
+                </section>
 
-                <!-- طرق السحب -->
-                <section id="withdrawal" class="article-section">
-                    <h2>💳 طرق سحب الأموال من الصنابير</h2>
-                    
-                    <div class="withdrawal-method">
-                        <h3>🔷 إلى محفظة البيتكوين</h3>
-                        <p>الطريقة الأساسية - انسخ عنوان محفظتك البيتكوين واسحب الأموال مباشرة إلى محفظتك الشخصية</p>
-                        <p><strong>المميزات:</strong> آمن جداً، بدون وسيط</p>
-                        <p><strong>العيوب:</strong> رسوم سحب قد تكون عالية في بعض المواقع</p>
-                    </div>
+                <!-- طرق السحب -->
+                <section id="withdrawal" class="article-section">
+                    <h2>💳 طرق سحب الأموال من الصنابير</h2>
+                    
+                    <div class="withdrawal-method">
+                        <h3>🔷 إلى محفظة البيتكوين</h3>
+                        <p>الطريقة الأساسية - انسخ عنوان محفظتك البيتكوين واسحب الأموال مباشرة إلى محفظتك الشخصية</p>
+                        <p><strong>المميزات:</strong> آمن جداً، بدون وسيط</p>
+                        <p><strong>العيوب:</strong> رسوم سحب قد تكون عالية في بعض المواقع</p>
+                    </div>
 
-                    <div class="withdrawal-method">
-                        <h3>🔷 إلى محفظة Faucet Hub</h3>
-                        <p>محفظة وسيطة توفر رسوم سحب منخفضة جداً، مشهورة بين الصنابير</p>
-                        <p><strong>الرابط:</strong> <a href="https://faucethub.io/" target="_blank">https://faucethub.io/</a></p>
-                        <p><strong>المميزات:</strong> رسوم منخفضة جداً، سحب سريع</p>
-                        <p><strong>العيوب:</strong> خطوة إضافية قبل السحب النهائي</p>
-                    </div>
+                    <div class="withdrawal-method">
+                        <h3>🔷 إلى محفظة Faucet Hub</h3>
+                        <p>محفظة وسيطة توفر رسوم سحب منخفضة جداً، مشهورة بين الصنابير</p>
+                        <p><strong>الرابط:</strong> <a href="https://faucethub.io/" target="_blank" class="faucet-link">https://faucethub.io/</a></p>
+                        <p><strong>المميزات:</strong> رسوم منخفضة جداً، سحب سريع</p>
+                        <p><strong>العيوب:</strong> خطوة إضافية قبل السحب النهائي</p>
+                    </div>
 
-                    <div class="withdrawal-method">
-                        <h3>🔷 إلى منصات التبادل</h3>
-                        <p>احول أرباحك إلى محفظتك على منصات مثل Binance أو Coinbase</p>
-                        <p><strong>الروابط:</strong></p>
-                        <ul style="text-align: right; margin-right: 1rem;">
-                            <li><a href="https://www.binance.com/" target="_blank">Binance</a></li>
-                            <li><a href="https://www.coinbase.com/" target="_blank">Coinbase</a></li>
-                            <li><a href="https://kraken.com/" target="_blank">Kraken</a></li>
-                        </ul>
-                        <p><strong>المميزات:</strong> يمكنك تحويل البيتكوين إلى عملات أخرى</p>
-                    </div>
+                    <div class="withdrawal-method">
+                        <h3>🔷 إلى منصات التبادل</h3>
+                        <p>احول أرباحك إلى محفظتك على منصات مثل Binance أو Coinbase</p>
+                        <p><strong>الروابط:</strong></p>
+                        <ul>
+                            <li><a href="https://www.binance.com/" target="_blank">Binance</a></li>
+                            <li><a href="https://www.coinbase.com/" target="_blank">Coinbase</a></li>
+                            <li><a href="https://kraken.com/" target="_blank">Kraken</a></li>
+                        </ul>
+                        <p><strong>المميزات:</strong> يمكنك تحويل البيتكوين إلى عملات أخرى</p>
+                    </div>
 
-                    <div class="withdrawal-method">
-                        <h3>🔷 إلى بطاقات ديجيتال</h3>
-                        <p>بعض الصنابير تسمح بتحويل الأموال مباشرة إلى بطاقات ديجيتال مثل Payoneer</p>
-                        <p><strong>الرابط:</strong> <a href="https://www.payoneer.com/" target="_blank">https://www.payoneer.com/</a></p>
-                        <p><strong>المميزات:</strong> يمكنك سحب الأموال بسهولة إلى حسابك البنكي</p>
-                    </div>
-                </section>
+                    <div class="withdrawal-method">
+                        <h3>🔷 إلى بطاقات ديجيتال</h3>
+                        <p>بعض الصنابير تسمح بتحويل الأموال مباشرة إلى بطاقات ديجيتال مثل Payoneer</p>
+                        <p><strong>الرابط:</strong> <a href="https://www.payoneer.com/" target="_blank" class="faucet-link">https://www.payoneer.com/</a></p>
+                        <p><strong>المميزات:</strong> يمكنك سحب الأموال بسهولة إلى حسابك البنكي</p>
+                    </div>
+                </section>
 
-                <!-- الخلاصة -->
-                <section id="conclusion" class="article-section conclusion">
-                    <h2>🎯 الخلاصة</h2>
-                    <p>
-                        صنابير البيتكوين طريقة شرعية وآمنة للحصول على البيتكوين بشكل مجاني، 
-                        لكنها ليست طريقة للثراء السريع. الأرباح منخفضة لكنها حقيقية وتتراكم بمرور الوقت.
-                    </p>
-                    <p>
-                        إذا كنت تبحث عن طريقة لكسب بعض البيتكوين الإضافي دون مخاطرة أموالك، 
-                        فإن صنابير البيتكوين خيار ممتاز. ابدأ بالمواقع الموثوقة، 
-                        طبق استراتيجيات الأمان، وكن صبوراً في جمع أرباحك.
-                    </p>
-                    <div class="pro-tips">
-                        <h3>💡 نصائح احترافية أخيرة:</h3>
-                        <ul>
-                            <li>ابدأ الآن - كلما بدأت مبكراً كلما حصلت على المزيد من البيتكوين</li>
-                            <li>كن منتظماً - المفتاح هو الاستمرارية والمثابرة</li>
-                            <li>ابحث باستمرار - هناك صنابير جديدة وفرص جديدة يومياً</li>
-                            <li>تعلم أكثر - ادرس سوق العملات الرقمية لفهم الفرص الأفضل</li>
-                            <li>استخدم روابط الإحالة - شارك أرباحك مع الآخرين واحصل على عمولة</li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
+                <!-- الخلاصة -->
+                <section id="conclusion" class="article-section">
+                    <h2>🎯 الخلاصة</h2>
+                    <p>
+                        صنابير البيتكوين طريقة شرعية وآمنة للحصول على البيتكوين بشكل مجاني، 
+                        لكنها ليست طريقة للثراء السريع. الأرباح منخفضة لكنها حقيقية وتتراكم بمرور الوقت.
+                    </p>
+                    <p>
+                        إذا كنت تبحث عن طريقة لكسب بعض البيتكوين الإضافي دون مخاطرة أموالك، 
+                        فإن صنابير البيتكوين خيار ممتاز. ابدأ بالمواقع الموثوقة، 
+                        طبق استراتيجيات الأمان، وكن صبوراً في جمع أرباحك.
+                    </p>
+                    <div class="pro-tips">
+                        <h3>💡 نصائح احترافية أخيرة:</h3>
+                        <ul>
+                            <li>ابدأ الآن - كلما بدأت مبكراً كلما حصلت على المزيد من البيتكوين</li>
+                            <li>كن منتظماً - المفتاح هو الاستمرارية والمثابرة</li>
+                            <li>ابحث باستمرار - هناك صنابير جديدة وفرص جديدة يومياً</li>
+                            <li>تعلم أكثر - ادرس سوق العملات الرقمية لفهم الفرص الأفضل</li>
+                            <li>استخدم روابط الإحالة - شارك أرباحك مع الآخرين واحصل على عمولة</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
 
-            <!-- مشاركة المقالة -->
-            <div class="article-share">
-                <p>📢 شارك هذه المقالة مع أصدقائك:</p>
-                <button onclick="shareArticle()" class="share-btn">مشاركة</button>
-            </div>
-        </div>
-    </article>
+            <!-- مشاركة المقالة -->
+            <div class="article-share">
+                <p>📢 شارك هذه المقالة مع أصدقائك:</p>
+                <button onclick="shareArticle()" class="share-btn">مشاركة</button>
+            </div>
+        </div>
+    </article>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 مدونة عاشوايي - جميع الحقوق محفوظة | <a href="../index.html">العودة للرئيسية</a></p>
-    </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 مدونة eashwayiy • كل شيء عشوائي وكل عشوائي جميل 🌿 | <a href="../index.html">العودة للرئيسية</a></p>
+    </footer>
 
-    <script src="../js/script.js"></script>
-    <script>
-        function shareArticle() {
-            const url = window.location.href;
-            const title = "ربح البيتكوين من صنابير البيتكوين - مدونة عاشوايي";
-            
-            if (navigator.share) {
-                navigator.share({
-                    title: title,
-                    url: url
-                });
-            } else {
-                alert('رابط المقالة:\n' + url);
-            }
-        }
-    </script>
+    <script>
+        function shareArticle() {
+            const url = window.location.href;
+            const title = "ربح البيتكوين من صنابير البيتكوين - eashwayiy";
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: title,
+                    url: url
+                });
+            } else {
+                alert('رابط المقالة:\n' + url);
+            }
+        }
+    </script>
 </body>
 </html>
