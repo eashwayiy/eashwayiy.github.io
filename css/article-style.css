@@ -1,19 +1,23 @@
-/* Article Specific Styles */
+/* إعدادات المقالة - ثيم الأخضر والأبيض */
+
 .article-container {
     padding: 3rem 2rem;
-    background: white;
+    background: var(--pure-white);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    margin-top: 20px;
 }
 
 .article-header {
     text-align: center;
     margin-bottom: 3rem;
     padding-bottom: 2rem;
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--primary-green);
 }
 
 .article-header h1 {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--dark-green);
     margin-bottom: 1rem;
     line-height: 1.4;
 }
@@ -33,19 +37,20 @@
     gap: 0.5rem;
 }
 
-/* Table of Contents */
+/* جدول المحتويات - Table of Contents */
 .table-of-contents {
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));
-    padding: 1.5rem;
-    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.1), rgba(39, 174, 96, 0.1));
+    padding: 1.8rem;
+    border-radius: 15px;
     margin-bottom: 2rem;
-    border-right: 4px solid var(--primary-color);
+    border-right: 5px solid var(--primary-green);
 }
 
 .table-of-contents h3 {
-    color: var(--primary-color);
+    color: var(--dark-green);
     margin-bottom: 1rem;
     text-align: right;
+    font-size: 1.3rem;
 }
 
 .table-of-contents ul {
@@ -59,18 +64,18 @@
 }
 
 .table-of-contents a {
-    color: var(--secondary-color);
+    color: var(--text-dark);
     text-decoration: none;
     transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 .table-of-contents a:hover {
-    color: var(--primary-color);
-    text-decoration: underline;
-    margin-right: 0.5rem;
+    color: var(--primary-green);
+    padding-right: 8px; /* تأثير حركة بسيط عند التمرير */
 }
 
-/* Article Content */
+/* محتوى المقال - Article Content */
 .article-content {
     max-width: 900px;
     margin: 0 auto;
@@ -80,32 +85,32 @@
 .article-section {
     margin-bottom: 3rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .article-section h2 {
-    color: var(--primary-color);
+    color: var(--primary-green);
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--accent-bg);
 }
 
 .article-section h3 {
-    color: var(--secondary-color);
-    font-size: 1.2rem;
+    color: var(--dark-green);
+    font-size: 1.3rem;
     margin-bottom: 0.8rem;
     margin-top: 1.5rem;
 }
 
 .article-section p {
     color: var(--text-dark);
-    margin-bottom: 1rem;
-    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    line-height: 1.9;
     font-size: 1.05rem;
 }
 
-/* Lists */
+/* القوائم - Lists */
 .benefits-list,
 .disadvantages-list,
 .security-tips {
@@ -116,22 +121,22 @@
 .benefits-list li,
 .disadvantages-list li,
 .security-tips li {
-    padding: 1rem;
-    margin-bottom: 0.8rem;
-    background: var(--bg-light);
-    border-right: 4px solid var(--primary-color);
-    border-radius: 4px;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    background: var(--soft-white);
+    border-right: 5px solid var(--primary-green);
+    border-radius: 10px;
     color: var(--text-dark);
-    line-height: 1.6;
+    transition: transform 0.2s;
 }
 
-.benefits-list strong,
-.disadvantages-list strong,
-.security-tips strong {
-    color: var(--primary-color);
+.benefits-list li:hover {
+    transform: scale(1.01);
 }
 
-/* Steps */
+.benefits-list strong { color: var(--dark-green); }
+
+/* الخطوات - Steps */
 .steps {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -140,220 +145,94 @@
 }
 
 .step {
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-top: 3px solid var(--primary-color);
+    background: var(--accent-bg);
+    padding: 1.8rem;
+    border-radius: 15px;
+    border-top: 4px solid var(--primary-green);
     text-align: right;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
 }
 
 .step h3 {
-    color: var(--primary-color);
+    color: var(--primary-green);
     margin-bottom: 0.8rem;
 }
 
-.step p {
-    color: var(--text-light);
-}
-
-/* Faucet Cards */
+/* كروت الصنابير - Faucet Cards */
 .faucet-card {
     background: white;
-    border: 2px solid var(--border-color);
-    border-right: 4px solid var(--secondary-color);
+    border: 1px solid #e0e0e0;
+    border-right: 5px solid var(--light-green);
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    border-radius: 8px;
+    border-radius: 12px;
     transition: all 0.3s ease;
 }
 
 .faucet-card:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(39, 174, 96, 0.15);
     transform: translateX(-5px);
 }
 
-.faucet-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    text-align: right;
-}
+.faucet-card h3 { color: var(--dark-green); }
+.faucet-card strong { color: var(--primary-green); }
 
-.faucet-card p {
-    margin-bottom: 0.8rem;
-    text-align: right;
-    color: var(--text-dark);
-}
-
-.faucet-card strong {
-    color: var(--secondary-color);
-}
-
-/* Strategy Cards */
+/* الاستراتيجيات - Strategy Cards */
 .strategy {
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(59, 130, 246, 0.05));
+    background: linear-gradient(135deg, rgba(232, 245, 233, 1), rgba(200, 230, 201, 0.5));
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    border-radius: 8px;
-    border-right: 4px solid var(--primary-color);
+    border-radius: 12px;
+    border-right: 5px solid var(--primary-green);
 }
 
-.strategy h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.8rem;
-    text-align: right;
+/* زر المشاركة - Share Section */
+.article-share {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 3rem;
+    background: var(--accent-bg);
+    border-radius: 20px;
 }
 
-.strategy p {
-    color: var(--text-dark);
-    text-align: right;
-}
-
-/* Withdrawal Methods */
-.withdrawal-method {
-    background: white;
-    border: 2px solid var(--border-color);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    border-right: 4px solid var(--secondary-color);
-    text-align: right;
-}
-
-.withdrawal-method h3 {
-    color: var(--secondary-color);
-    margin-bottom: 0.8rem;
-}
-
-.withdrawal-method p {
-    color: var(--text-light);
-}
-
-/* Conclusion Section */
-.conclusion {
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));
-    padding: 2rem;
-    border-radius: 8px;
-    border-right: 4px solid var(--primary-color);
-    text-align: right;
-}
-
-.conclusion p {
-    margin-bottom: 1.5rem;
+.share-btn {
+    background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
     font-size: 1.1rem;
-    color: var(--text-dark);
-    line-height: 1.8;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
 }
 
+.share-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+}
+
+/* نصائح المحترفين - Pro Tips */
 .pro-tips {
-    background: white;
+    background: var(--pure-white);
     padding: 1.5rem;
     margin-top: 1.5rem;
-    border-radius: 8px;
-    border-right: 4px solid var(--secondary-color);
-}
-
-.pro-tips h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    text-align: right;
-}
-
-.pro-tips ul {
-    list-style: none;
-    text-align: right;
-}
-
-.pro-tips li {
-    padding: 0.6rem 0;
-    color: var(--text-dark);
-    margin-right: 1rem;
+    border-radius: 12px;
+    border-right: 5px solid var(--light-green);
+    box-shadow: var(--shadow);
 }
 
 .pro-tips li:before {
     content: "✓ ";
-    color: var(--primary-color);
+    color: var(--primary-green);
     font-weight: bold;
-    margin-left: 0.5rem;
-}
-
-/* Article Share */
-.article-share {
-    text-align: center;
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 2px solid var(--border-color);
-}
-
-.article-share p {
-    color: var(--text-dark);
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
-.share-btn {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.share-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
-}
-
-/* Footer Link */
-.footer a {
-    color: white;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-}
-
-.footer a:hover {
-    opacity: 0.8;
-    text-decoration: underline;
+    margin-left: 0.8rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .article-header h1 {
-        font-size: 1.8rem;
-    }
-    
-    .article-meta {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-    
-    .steps {
-        grid-template-columns: 1fr;
-    }
-    
-    .article-section h2 {
-        font-size: 1.5rem;
-    }
-    
-    .table-of-contents {
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .article-container {
-        padding: 1.5rem 1rem;
-    }
-    
-    .article-header h1 {
-        font-size: 1.4rem;
-    }
-    
-    .article-meta {
-        gap: 0.5rem;
-        font-size: 0.85rem;
-    }
+    .article-header h1 { font-size: 1.8rem; }
+    .article-container { padding: 1.5rem; border-radius: 0; }
+    .steps { grid-template-columns: 1fr; }
 }
