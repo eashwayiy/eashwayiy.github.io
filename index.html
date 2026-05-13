@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مدونة عاشوايي - أفضل مدونة تقنية للبرمجة والويب والتطبيقات والتكنولوجيا والذكاء الاصطناعي والبرمجيات والدروس والشروحات والمعلومات التقنية المفيدة والأخبار التقنية والتطور الويب وتطوير التطبيقات وأساسيات البرمجة والبرامج والأدوات التقنية">
+    <meta name="keywords" content="برمجة, ويب, تطبيقات, تكنولوجيا, درس برمجة, شرح كود, دروس تقنية, ذكاء اصطناعي, تطوير الويب, تطوير التطبيقات, HTML, CSS, JavaScript, Python, Java, PHP, البرمجيات, أدوات التطوير">
+    <meta name="author" content="عاشوايي">
+    <meta property="og:title" content="مدونة عاشوايي - مدونة تقنية شاملة">
+    <meta property="og:description" content="منصة متكاملة للدروس والشروحات التقنية والبرمجة">
+    <title>مدونة عاشوايي - دروس برمجة وتقنية متقدمة</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🚀 عاشوايي</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#posts">المقالات</a></li>
+                <li><a href="#about">حول</a></li>
+                <li><a href="#contact">تواصل</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>مرحباً بك في مدونة عاشوايي</h1>
+            <p>منصة متكاملة لتعلم البرمجة والتطوير والتكنولوجيا</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="ابحث عن مقالات..." class="search-box">
+                <button onclick="performSearch()" class="search-btn">🔍 بحث</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Results Section -->
+    <section id="searchResults" class="search-results" style="display:none;">
+        <div class="container">
+            <h2>نتائج البحث</h2>
+            <div id="resultsContainer"></div>
+        </div>
+    </section>
+
+    <!-- Posts Section -->
+    <section class="posts" id="posts">
+        <div class="container">
+            <h2>أحدث المقالات</h2>
+            <div class="posts-grid" id="postsContainer">
+                <div class="post-card">
+                    <div class="post-image">📝</div>
+                    <h3>لم يتم تحميل المقالات</h3>
+                    <p>قم بإضافة ملفات HTML في مجلد posts</p>
+                    <a href="#" class="read-more">اقرأ المزيد</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>عن المدونة</h2>
+            <div class="about-content">
+                <p>مدونة عاشوايي متخصصة في تقديم دروس وشروحات تقنية عالية الجودة في مجالات:</p>
+                <ul class="about-list">
+                    <li>🌐 تطوير الويب (HTML, CSS, JavaScript)</li>
+                    <li>🐍 البرمجة بلغات متعددة (Python, Java, PHP)</li>
+                    <li>🤖 الذكاء الاصطناعي والتعلم الآلي</li>
+                    <li>📱 تطوير التطبيقات</li>
+                    <li>⚙️ هندسة البرمجيات وأفضل الممارسات</li>
+                    <li>🔧 أدوات التطوير والبرامج المساعدة</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>تواصل معنا</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="اسمك" required>
+                <input type="email" placeholder="بريدك الإلكتروني" required>
+                <textarea placeholder="رسالتك" rows="5" required></textarea>
+                <button type="submit">إرسال</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 مدونة عاشوايي - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
