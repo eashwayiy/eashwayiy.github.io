@@ -5,298 +5,353 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>eashwayiy — عالم جديد من الأفكار</title>
   
-  <!-- Fonts: Cairo for Bold Impact, Montserrat for Numbers -->
+  <!-- Fonts: Cairo for Arabic, Montserrat for Numbers -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Montserrat:wght@800&display=swap" rel="stylesheet" />
 
   <style>
-    /* ══════════════════════════════════════════════
-       NEO-BRUTALISM DESIGN TOKENS
-    ══════════════════════════════════════════════ */
     :root {
-      --bg: #f3f4f6;          /* رمادي فاتح جداً للخلفية */
-      --white: #ffffff;
-      --black: #1a1a1a;       /* أسود ناعم للحدود والنصوص */
-      --primary: #ffeb3b;     /* أصفر صريح */
-      --secondary: #00e5ff;   /* سيان مشع */
-      --accent: #ff4081;      /* وردي قوي */
-      --success: #00c853;
-      --shadow: 8px 8px 0px #1a1a1a; /* ظل صلب مميز للستايل */
+      --bg: #fafafa;
+      --white: #fff;
+      --black: #232323;
+      --primary: #ffe047;        /* أصفر هادئ */
+      --secondary: #00bdd6;      /* سيان أكثر هدوء */
+      --accent: #ff3971;
+      --success: #00b773;
+      --shadow: 6px 6px 0px #232323;
+      --radius: 14px;
       --font-main: 'Cairo', sans-serif;
     }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+    *, *::before, *::after { box-sizing: border-box; }
     body {
-      background-color: var(--bg);
-      color: var(--black);
+      padding: 0; margin: 0;
       font-family: var(--font-main);
-      line-height: 1.6;
-      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--black);
+      min-height: 100vh;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
     }
 
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
-    /* ══════════════════════════════════════════════
-       NAVIGATION (Floating Glass)
-    ══════════════════════════════════════════════ */
+    /* ==== NAVBAR ==== */
     header {
-      padding: 20px 0;
+      background: var(--white);
+      border-bottom: 3px solid var(--black);
+      box-shadow: var(--shadow);
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 10;
     }
-
     nav {
-      background: var(--white);
-      border: 3px solid var(--black);
-      box-shadow: 4px 4px 0px var(--black);
-      border-radius: 12px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      padding: 10px 25px;
+      align-items: center;
+      padding: 1.2rem 0;
     }
-
     .logo {
-      font-size: 1.8rem;
       font-weight: 900;
-      text-transform: uppercase;
+      font-size: 2rem;
       letter-spacing: -1px;
+      color: var(--black);
     }
-    .logo span { background: var(--primary); padding: 0 5px; }
-
-    .nav-links { display: flex; list-style: none; gap: 15px; }
+    .logo span {
+      background: var(--primary);
+      padding: 0 8px;
+      border-radius: 6px;
+      margin-inline: 3px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      list-style: none;
+      margin: 0;
+    }
     .nav-links a {
-      font-weight: 700;
-      padding: 5px 10px;
-      border-radius: 5px;
-      transition: 0.2s;
+      color: var(--black);
+      font-weight: 800;
+      padding: 5px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
     }
-    .nav-links a:hover { background: var(--secondary); transform: rotate(-2deg); }
-
-    /* ══════════════════════════════════════════════
-       HERO SECTION
-    ══════════════════════════════════════════════ */
-    .hero {
-      padding: 80px 0 50px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 900;
-      line-height: 1.1;
-      margin-bottom: 20px;
-      -webkit-text-stroke: 2px var(--black);
+    .nav-links a:focus,
+    .nav-links a:hover {
+      background: var(--secondary);
       color: var(--white);
-      text-shadow: 6px 6px 0px var(--black);
     }
+    .search-btn {
+      font-size: 1.4rem;
+      font-weight: 900;
+      background: var(--primary);
+      border: 2px solid var(--black);
+      border-radius: 5px;
+      padding: 3px 14px;
+      cursor: pointer;
+      transition: box-shadow 0.2s;
+    }
+    .search-btn:hover { box-shadow: 3px 3px 0 var(--black); }
 
+    /* ==== HERO ==== */
+    .hero {
+      text-align: center;
+      padding: 60px 0 38px;
+    }
+    .hero-title {
+      font-size: clamp(2.7rem, 5.5vw, 4.5rem);
+      font-weight: 900;
+      color: var(--white);
+      text-shadow: 5px 5px 0 var(--black);
+      -webkit-text-stroke: 2px var(--black);
+      margin-bottom: 14px;
+    }
     .hero-box {
       display: inline-block;
       background: var(--primary);
       border: 3px solid var(--black);
-      padding: 10px 30px;
+      border-radius: var(--radius);
       box-shadow: var(--shadow);
-      transform: rotate(1deg);
+      padding: 12px 36px;
+      font-size: 1.25rem;
       font-weight: 700;
-      font-size: 1.2rem;
     }
 
-    /* ══════════════════════════════════════════════
-       CARDS GRID
-    ══════════════════════════════════════════════ */
+    /* ==== POSTS ==== */
     .posts-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(290px,1fr));
+      gap: 32px;
       padding: 40px 0;
+      margin: 0;
     }
-
     .post-card {
       background: var(--white);
-      border: 3px solid var(--black);
+      border: 2.5px solid var(--black);
       box-shadow: var(--shadow);
-      border-radius: 0px; /* ستايل حاد */
-      transition: 0.3s;
+      border-radius: var(--radius);
       display: flex;
       flex-direction: column;
       text-decoration: none;
       color: inherit;
-    }
-
-    .post-card:hover {
-      transform: translate(-4px, -4px);
-      box-shadow: 12px 12px 0px var(--black);
-    }
-
-    .card-img {
-      border-bottom: 3px solid var(--black);
-      height: 200px;
-      background: #ddd;
+      transition: transform 0.22s, box-shadow 0.22s;
       overflow: hidden;
     }
-
-    .card-img img { width: 100%; height: 100%; object-fit: cover; }
-
-    .card-body { padding: 20px; flex-grow: 1; }
-
-    .card-category {
-      display: inline-block;
-      background: var(--secondary);
-      border: 2px solid var(--black);
-      padding: 2px 10px;
-      font-size: 0.8rem;
-      font-weight: 900;
-      margin-bottom: 15px;
+    .post-card:hover {
+      transform: translate(-3px,-3px) scale(1.03);
+      box-shadow: 11px 11px 0px var(--accent);
+      border-color: var(--accent);
     }
+    .card-img {
+      background: #ededed;
+      border-bottom: 2.5px solid var(--black);
+      height: 175px;
+      overflow: hidden;
+    }
+    .card-img img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.17s;
+    }
+    .post-card:hover .card-img img { transform: scale(1.06); }
 
-    .card-body h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 10px; }
+    .card-body {
+      padding: 18px 18px 12px 18px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-category {
+      align-self: flex-start;
+      border-radius: 5px;
+      padding: 2px 12px;
+      font-size: 0.88rem;
+      font-weight: 900;
+      border: 2px solid var(--black);
+      margin-bottom: 12px;
+    }
+    .cat-crypto   { background: var(--primary); }
+    .cat-ai       { background: var(--secondary); color: var(--white);}
+    .cat-health   { background: var(--success); color: var(--white);}
+    .card-body h3 {
+      font-size: 1.18rem;
+      font-weight: 800;
+      margin-bottom: 7px;
+      margin-top: 0;
+    }
+    .card-body p { font-weight: 400; color: #444; }
 
     .card-footer {
-      padding: 15px 20px;
+      background: var(--bg);
       border-top: 2px dashed var(--black);
       font-weight: 700;
+      padding: 10px 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      font-size: 1.04rem;
+      border-radius: 0 0 var(--radius) var(--radius);
     }
 
-    /* ══════════════════════════════════════════════
-       NEWSLETTER (The "Pop" Box)
-    ══════════════════════════════════════════════ */
+    /* ==== NEWSLETTER ==== */
     .newsletter {
       background: var(--accent);
-      border: 4px solid var(--black);
-      padding: 50px;
-      margin: 60px 0;
-      box-shadow: 12px 12px 0px var(--black);
       color: var(--white);
+      border: 4px solid var(--black);
+      border-radius: var(--radius);
+      box-shadow: 10px 10px 0 var(--black);
+      padding: 44px 20px 38px 20px;
+      margin: 54px 0 0;
       text-align: center;
     }
-
-    .newsletter h2 { font-size: 2.5rem; margin-bottom: 20px; -webkit-text-stroke: 1px var(--black); }
-
-    .newsletter input {
-      padding: 15px;
-      border: 3px solid var(--black);
-      width: 300px;
+    .newsletter h2 { 
+      font-size: 2.1rem;
+      font-weight: 900;
+      -webkit-text-stroke: 1.5px var(--black);
+      margin-bottom: 18px;
+    }
+    .newsletter p { margin-bottom: 17px; font-weight: 700;}
+    .newsletter form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+    .newsletter input[type="email"] {
+      padding: 13px;
+      border: 2.5px solid var(--black);
+      border-radius: 6px;
+      min-width: 220px;
       font-family: inherit;
       font-weight: 700;
       outline: none;
     }
-
     .newsletter button {
-      padding: 15px 30px;
-      border: 3px solid var(--black);
+      padding: 13px 28px;
+      border-radius: 6px;
+      border: 2.5px solid var(--black);
       background: var(--primary);
       color: var(--black);
       font-weight: 900;
+      font-size: 1rem;
       cursor: pointer;
-      box-shadow: 4px 4px 0px var(--black);
-      transition: 0.2s;
+      box-shadow: 3px 3px 0 var(--black);
+      transition: transform 0.15s, box-shadow 0.15s;
     }
+    .newsletter button:hover { transform: translate(-1.5px,-1.5px); box-shadow: 6px 6px 0 var(--black); }
 
-    .newsletter button:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0px var(--black); }
-
-    /* ══════════════════════════════════════════════
-       FOOTER
-    ══════════════════════════════════════════════ */
+    /* ==== FOOTER ==== */
     footer {
       background: var(--black);
       color: var(--white);
-      padding: 50px 0;
       text-align: center;
+      padding: 40px 0 30px 0;
+      margin-top: 60px;
+      border-top: 2px solid var(--primary);
     }
+    .footer-title {font-size: 1.4rem;font-weight: bold;letter-spacing:1px;margin-bottom:10px;}
+    .footer-note {opacity: 0.87;}
 
-    /* ══════════════════════════════════════════════
-       RESPONSIVE
-    ══════════════════════════════════════════════ */
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .newsletter input { width: 100%; margin-bottom: 10px; }
-      .hero h1 { font-size: 2.5rem; }
+    /* ==== RESPONSIVE ==== */
+    @media (max-width: 600px) {
+      .container { padding: 0 8px; }
+      nav { flex-direction: column; gap: 12px;}
+      .hero-title { font-size: 2.1rem; -webkit-text-stroke: 1px var(--black);}
+      .newsletter {padding: 27px 7px;}
+      .posts-grid { gap: 17px; }
+      .card-img { height: 115px;}
+      .card-body { padding: 11px 9px 7px 9px;}
+      .card-footer { padding: 7px 9px; font-size: 0.99rem;}
+    }
+    @media (max-width: 900px) {
+      .posts-grid { grid-template-columns: 1fr;}
     }
   </style>
 </head>
 <body>
 
-  <header class="container">
-    <nav>
-      <div class="logo">eash<span>wayiy</span></div>
-      <ul class="nav-links">
-        <li><a href="#">الرئيسية</a></li>
-        <li><a href="#">تقنية</a></li>
-        <li><a href="#">ذكاء اصطناعي</a></li>
-        <li><a href="#">عن المدونة</a></li>
-      </ul>
-      <div style="font-weight: 900; cursor: pointer;">🔍 بحث</div>
-    </nav>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">eash<span>wayiy</span></div>
+        <ul class="nav-links">
+          <li><a href="#">الرئيسية</a></li>
+          <li><a href="#">تقنية</a></li>
+          <li><a href="#">ذكاء اصطناعي</a></li>
+          <li><a href="#">عن المدونة</a></li>
+        </ul>
+        <button class="search-btn" aria-label="بحث">🔍</button>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero container">
-    <h1>محتوى تقني بروح عصرية</h1>
-    <div class="hero-box">أهلاً بك في eashwayiy — حيث تلتقي التكنولوجيا بالبساطة</div>
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">محتوى تقني بروح عصرية</h1>
+      <div class="hero-box">أهلاً بك في eashwayiy — حيث تلتقي التكنولوجيا بالبساطة</div>
+    </div>
   </section>
 
   <main class="container">
     <div class="posts-grid">
-      
+
       <!-- Card 1 -->
-      <a href="posts/passive-income-referrals.html" class="post-card">
+      <a href="posts/passive-income-referrals.html" class="post-card" aria-label="اقرأ سر الدخل السلبي: مضاعفة أرباح الصنابير">
         <div class="card-img">
           <img src="https://img.freepik.com/free-vector/refer-friend-concept-illustration_114360-7039.jpg" alt="">
         </div>
         <div class="card-body">
-          <div class="card-category" style="background: var(--primary);">عملات رقمية</div>
+          <div class="card-category cat-crypto">عملات رقمية</div>
           <h3>سر الدخل السلبي: مضاعفة أرباح الصنابير</h3>
           <p>تعلم كيف تجعل الروابط تعمل لأجلك 24 ساعة في اليوم بدون توقف.</p>
         </div>
         <div class="card-footer">
           <span>📅 مايو 2026</span>
-          <span style="color: var(--accent);">اقرأ المزيد ←</span>
+          <span style="color:var(--accent)">اقرأ المزيد ←</span>
         </div>
       </a>
 
       <!-- Card 2 -->
-      <a href="#" class="post-card">
+      <a href="#" class="post-card" aria-label="اقرأ أدوات الذكاء الاصطناعي في 2026">
         <div class="card-img">
           <img src="https://img.freepik.com/free-photo/ai-technology-brain-background-digital-transformation-concept_53876-124671.jpg" alt="">
         </div>
         <div class="card-body">
-          <div class="card-category" style="background: var(--secondary);">ذكاء اصطناعي</div>
+          <div class="card-category cat-ai">ذكاء اصطناعي</div>
           <h3>أدوات الذكاء الاصطناعي في 2026</h3>
           <p>دليل شامل لأهم الأدوات التي ستغير طريقة عملك وحياتك هذا العام.</p>
         </div>
         <div class="card-footer">
           <span>📅 مايو 2026</span>
-          <span style="color: var(--accent);">اقرأ المزيد ←</span>
+          <span style="color:var(--accent)">اقرأ المزيد ←</span>
         </div>
       </a>
 
       <!-- Card 3 -->
-      <a href="#" class="post-card">
+      <a href="#" class="post-card" aria-label="اقرأ فوائد الاستحمام بالماء البارد">
         <div class="card-img">
           <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=600&q=80" alt="">
         </div>
         <div class="card-body">
-          <div class="card-category" style="background: var(--success); color: white;">صحة</div>
+          <div class="card-category cat-health">صحة</div>
           <h3>فوائد الاستحمام بالماء البارد</h3>
           <p>اكتشف العلم وراء هذه العادة البسيطة وتأثيرها المذهل على دماغك.</p>
         </div>
         <div class="card-footer">
           <span>📅 مايو 2026</span>
-          <span style="color: var(--accent);">اقرأ المزيد ←</span>
+          <span style="color:var(--accent)">اقرأ المزيد ←</span>
         </div>
       </a>
 
     </div>
 
-    <section class="newsletter">
+    <section class="newsletter" aria-label="الاشتراك بالقائمة البريدية">
       <h2>انضم إلى القائمة البريدية</h2>
-      <p style="margin-bottom: 20px; font-weight: 700;">لا نرسل إلا المحتوى الذي يستحق وقتك فعلاً.</p>
-      <form onsubmit="event.preventDefault(); alert('شكراً لثقتك!');">
+      <p>لا نرسل إلا المحتوى الذي يستحق وقتك فعلاً.</p>
+      <form onsubmit="event.preventDefault();alert('شكراً لثقتك!');">
         <input type="email" placeholder="اكتب بريدك هنا..." required>
         <button type="submit">سجلني الآن!</button>
       </form>
@@ -305,8 +360,8 @@
 
   <footer>
     <div class="container">
-      <h2 style="margin-bottom: 20px;">eashwayiy</h2>
-      <p>صنع بكل حب للمحتوى العربي الأصيل © 2026</p>
+      <div class="footer-title">eashwayiy</div>
+      <div class="footer-note">صنع بكل حب للمحتوى العربي الأصيل © 2026</div>
     </div>
   </footer>
 
