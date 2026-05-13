@@ -240,6 +240,13 @@
             border-radius: 18px;
             border-right: 5px solid var(--primary-green);
         }
+        .highlight {
+            background-color: #f9e79f;
+            color: #000;
+            font-weight: bold;
+            padding: 0 3px;
+            border-radius: 4px;
+        }
 
         /* ========= كروت المقالات ========= */
         .posts {
@@ -293,7 +300,6 @@
             border-color: var(--light-green);
         }
 
-        /* لإضفاء لمسة عشوائية خفيفة جداً على البطاقات */
         .post-card:nth-child(odd):hover {
             transform: translateY(-14px) rotate(-0.4deg);
         }
@@ -551,30 +557,7 @@
         <div class="container">
             <h2>✨ جرعة عشوائية اليوم</h2>
             <div class="posts-grid" id="postsContainer">
-                <div class="post-card">
-                    <div class="post-image">🤯</div>
-                    <h3>أغرب 7 اكتشافات علمية بالصدفة</h3>
-                    <p>من البنسلين إلى رقائق البطاطس، أشياء غيّرت العالم دون تخطيط.</p>
-                    <a href="#" class="read-more">تصفح العشوائية ←</a>
-                </div>
-                <div class="post-card">
-                    <div class="post-image">🎨</div>
-                    <h3>كيف ترسم لوحة فنية بكوب قهوة؟</h3>
-                    <p>فكرة عشوائية لاستغلال بقايا القهوة في إبداع فني مدهش.</p>
-                    <a href="#" class="read-more">اكتشف الطريقة ←</a>
-                </div>
-                <div class="post-card">
-                    <div class="post-image">🪴</div>
-                    <h3>نباتات تتكلم؟ حقيقة أم خيال علمي</h3>
-                    <p>دراسات حديثة تكشف أن النباتات تتواصل بطرق لم تكن تتوقعها.</p>
-                    <a href="#" class="read-more">اقرأ المزيد ←</a>
-                </div>
-                <div class="post-card">
-                    <div class="post-image">🍕</div>
-                    <h3>وصفة بيتزا في 5 دقائق ليلة الامتحان</h3>
-                    <p>أسرع عشاء عشوائي ينقذ الطلاب الجائعين بأقل المكونات.</p>
-                    <a href="#" class="read-more">جرب الوصفة ←</a>
-                </div>
+                <!-- سيتم ملؤها عشوائياً من البيانات الحقيقية -->
             </div>
         </div>
     </section>
@@ -616,9 +599,47 @@
     </footer>
 
     <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        // ========== بيانات المدونة الحقيقية ==========
+        const blogPosts = [
+            {
+                id: 1,
+                icon: '💰',
+                title: "ربح البيتكوين من صنابير البيتكوين - دليل شامل 2026",
+                description: "شرح مفصل عن كيفية ربح البيتكوين من صنابير البيتكوين (Faucets) - أفضل طرق الحصول على عملات رقمية مجانية وأماكن موثوقة وآمنة",
+                keywords: ["ربح", "بيتكوين", "صنابير","عملة"],
+                link: "posts/bitcoin-faucets.html",
+                excerpt: "صنابير البيتكوين (Bitcoin Faucets) هي مواقع وتطبيقات إلكترونية توفر للمستخدمين فرصة الحصول على كميات صغيرة من البيتكوين بشكل مجاني..."
+            }
+            // يمكنك إضافة المزيد من المقالات هنا بنفس التنسيق
+        ];
 
-        // وظيفة البحث العشوائي (محاكاة محتوى متنوع)
+        // ========== دالة اختيار عشوائي من المصفوفة ==========
+        function getRandomPosts(count = 4) {
+            const shuffled = [...blogPosts].sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, Math.min(count, blogPosts.length));
+        }
+
+        // ========== عرض المقالات العشوائية في الصفحة الرئيسية ==========
+        function displayRandomPosts() {
+            const container = document.getElementById('postsContainer');
+            const randomPosts = getRandomPosts(4); // عدد المقالات العشوائية (يمكن تغييره)
+
+            if (randomPosts.length === 0) {
+                container.innerHTML = '<p style="text-align:center;color:#999;">🎲 لا توجد مقالات بعد... عشوائية قادمة!</p>';
+                return;
+            }
+
+            container.innerHTML = randomPosts.map(post => `
+                <div class="post-card">
+                    <div class="post-image">${post.icon || '🎲'}</div>
+                    <h3>${post.title}</h3>
+                    <p>${post.excerpt || post.description}</p>
+                    <a href="${post.link}" class="read-more">اكتشف العشوائية ←</a>
+                </div>
+            `).join('');
+        }
+
+        // ========== دالة البحث (تستخدم نفس blogPosts) ==========
         function performSearch() {
             const query = document.getElementById('searchInput').value.trim().toLowerCase();
             const resultsSection = document.getElementById('searchResults');
@@ -629,38 +650,49 @@
                 return;
             }
 
-            const samplePosts = [
-                { title: 'كيف تجعل صباحك أكثر إيجابية', snippet: '7 عادات صباحية عشوائية وفعالة.' },
-                { title: 'أغرب القوانين حول العالم', snippet: 'قوانين لا تصدق أنها ما زالت سارية.' },
-                { title: 'نباتات تتوهج في الظلام', snippet: 'ظاهرة الإضاءة الحيوية في الطبيعة.' },
-                { title: 'اختصارات لوحة المفاتيح التي لم تسمع بها', snippet: 'طرق عشوائية لتوفير الوقت.' },
-                { title: 'بيتزا البطاطا الحلوة', snippet: 'وصفة غريبة ولذيذة في آن واحد.' },
-                { title: 'كيف تتنبأ بالطقس من شكل السحاب', snippet: 'مهارة عشوائية قديمة.' },
-                { title: 'ألعاب ورقية للشعور بالملل', snippet: 'أفكار بسيطة من مواد عشوائية.' }
-            ];
+            const results = blogPosts.filter(post => {
+                return post.title.toLowerCase().includes(query) ||
+                       post.description.toLowerCase().includes(query) ||
+                       post.keywords.some(keyword => keyword.toLowerCase().includes(query));
+            });
 
-            const filtered = samplePosts.filter(post =>
-                post.title.toLowerCase().includes(query) ||
-                post.snippet.toLowerCase().includes(query)
-            );
-
-            resultsContainer.innerHTML = '';
-            if (filtered.length === 0) {
-                resultsContainer.innerHTML =
-                    '<p style="text-align:center;color:#636e72;">😵 لم نجد شيئًا بهذه العشوائية... جرب كلمة أخرى!</p>';
-            } else {
-                filtered.forEach(post => {
-                    const card = document.createElement('div');
-                    card.className = 'result-card';
-                    card.innerHTML = `<h3>📌 ${post.title}</h3><p>${post.snippet}</p>`;
-                    resultsContainer.appendChild(card);
-                });
-            }
-
-            resultsSection.style.display = 'block';
-            resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            displayResults(results, query);
         }
 
+        // ========== عرض نتائج البحث مع تمييز النص ==========
+        function displayResults(results, searchTerm) {
+            const resultsContainer = document.getElementById('resultsContainer');
+            const searchResults = document.getElementById('searchResults');
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #636e72;">😵 لم نجد شيئًا بهذه العشوائية... جرب كلمة أخرى!</p>';
+            } else {
+                resultsContainer.innerHTML = results.map(post => {
+                    const highlightedTitle = highlightText(post.title, searchTerm);
+                    const highlightedDescription = highlightText(post.description, searchTerm);
+                    return `
+                        <div class="result-card">
+                            <h3>${highlightedTitle}</h3>
+                            <p>${highlightedDescription}</p>
+                            <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                                <small style="color: #999;">🏷️ ${post.keywords.join(', ')}</small>
+                                <a href="${post.link}" class="read-more" style="text-decoration: none; font-weight: bold; margin-top: 0.5rem;">اقرأ المقال ←</a>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            searchResults.style.display = 'block';
+            searchResults.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function highlightText(text, term) {
+            const regex = new RegExp(`(${term})`, 'gi');
+            return text.replace(regex, '<span class="highlight">$1</span>');
+        }
+
+        // ========== معالجة نموذج التواصل ==========
         function handleContact(event) {
             event.preventDefault();
             const form = event.target;
@@ -671,36 +703,24 @@
             }
         }
 
-        document.getElementById('searchInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') performSearch();
-        });
+        // ========== أحداث جاهزية الصفحة ==========
+        document.addEventListener('DOMContentLoaded', function() {
+            // سنة حقوق النشر
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // محاولة تحميل محتوى خارجي عشوائي إذا وجد
-        async function loadRandomPosts() {
-            try {
-                const response = await fetch('posts/index.json');
-                if (!response.ok) return;
-                const postsList = await response.json();
-                const postsContainer = document.getElementById('postsContainer');
-                if (postsList && postsList.length > 0) {
-                    postsContainer.innerHTML = '';
-                    postsList.forEach(post => {
-                        const card = document.createElement('div');
-                        card.className = 'post-card';
-                        card.innerHTML = `
-                            <div class="post-image">${post.icon || '🎲'}</div>
-                            <h3>${post.title}</h3>
-                            <p>${post.excerpt || 'محتوى عشوائي رائع من eashwayiy'}</p>
-                            <a href="posts/${post.slug}.html" class="read-more">اكتشف ←</a>
-                        `;
-                        postsContainer.appendChild(card);
-                    });
-                }
-            } catch (error) {
-                console.log('المقالات الافتراضية العشوائية قيد التشغيل.');
+            // عرض المقالات العشوائية عند التحميل
+            displayRandomPosts();
+
+            // دعم زر Enter في البحث
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                searchInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        performSearch();
+                    }
+                });
             }
-        }
-        document.addEventListener('DOMContentLoaded', loadRandomPosts);
+        });
     </script>
 </body>
 </html>
