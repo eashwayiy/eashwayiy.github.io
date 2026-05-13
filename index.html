@@ -640,7 +640,7 @@ const blogPosts = [
     }
 ];
         // ========== دالة اختيار عشوائي من المصفوفة ==========
-        function getRandomPosts(count = 4) {
+        function getRandomPosts(count = 6) {
             const shuffled = [...blogPosts].sort(() => 0.5 - Math.random());
             return shuffled.slice(0, Math.min(count, blogPosts.length));
         }
