@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: eashwayiy.github.io
+Sitemap: https://eashwayiy.github.io
