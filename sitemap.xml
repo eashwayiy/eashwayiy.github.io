@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <!-- الصفحة الرئيسية -->
+  <url>
+    <loc>https://eashwayiy.github.io/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <mobile:mobile/>
+  </url>
+
+  <!-- قسم الرئيسية (Home) -->
+  <url>
+    <loc>https://eashwayiy.github.io/#home</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+  </url>
+
+  <!-- قسم العشوائيات (Posts) -->
+  <url>
+    <loc>https://eashwayiy.github.io/#posts</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <mobile:mobile/>
+  </url>
+
+  <!-- قسم عن (About) -->
+  <url>
+    <loc>https://eashwayiy.github.io/#about</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+  </url>
+
+  <!-- المقال الأول: ربح البيتكوين -->
+  <url>
+    <loc>https://eashwayiy.github.io/posts/bitcoin-faucets.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+
+  <!-- المقال الثاني: الذكاء الاصطناعي -->
+  <url>
+    <loc>https://eashwayiy.github.io/posts/ai-trends-2026.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <mobile:mobile/>
+  </url>
+
+  <!-- المقال الثالث: العملات الرقمية -->
+  <url>
+    <loc>https://eashwayiy.github.io/posts/crypto-trends-2026.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+
+  <!-- المقال الرابع: السيارات الكهربائية -->
+  <url>
+    <loc>https://eashwayiy.github.io/posts/electric-vehicles-2026.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+
+  <!-- المقال الخامس: الأمن السيبراني -->
+  <url>
+    <loc>https://eashwayiy.github.io/posts/cyber-security-2026.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+
+  <!-- المقال السادس: خصوصية الهاتف -->
+  <url>
+    <loc>https://eashwayiy.github.io/posts/phone-privacy-2026.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <mobile:mobile/>
+  </url>
+
+</urlset>
